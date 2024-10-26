@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@id/map" android:title="@string/map" />
+        <item android:id="@id/satellite_amap" android:title="@string/satellite" />
+        <item android:id="@id/satellite" android:title="@string/satelliteGoogle" />
+        <item android:id="@id/satellite_tianditu" android:title="@string/satelliteTianditu" />
+        <item android:id="@id/terrain" android:title="@string/terrainGoogle" />
+        <item android:id="@id/terrain_OpenTopoMap" android:title="@string/terrainOpenTopoMap" />
+    </group>
+    <item android:id="@id/space_station" android:title="@string/space_station" android:checkable="true" />
+    <item android:id="@id/amateur_radio_satellite" android:title="@string/amateur_radio_satellite" android:checkable="true" />
+</menu>

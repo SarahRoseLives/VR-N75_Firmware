@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:elevation="6.0dip">
+        <com.dw.widget.GridViewEx android:id="@id/grid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnWidth="@dimen/alphabet_index_item_size" android:numColumns="auto_fit" />
+        <TextView android:textAppearance="@style/TextAppearance.AlphabetIndex" android:gravity="center" android:id="@id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:text="@string/currentOrderNotSupportFastJump" />
+    </LinearLayout>
+</LinearLayout>

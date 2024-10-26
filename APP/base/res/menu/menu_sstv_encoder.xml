@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_photo_24dp" android:id="@id/action_pick" android:title="@string/action_pick_picture" app:showAsAction="always">
+        <menu>
+            <item android:id="@id/action_pick_picture" android:title="@string/action_pick_picture" />
+            <item android:id="@id/action_take_picture" android:title="@string/action_take_picture" />
+        </menu>
+    </item>
+    <item android:icon="@drawable/ic_stop_24dp" android:id="@id/action_stop" android:title="@string/action_stop" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_play_arrow_24dp" android:id="@id/action_play" android:title="@string/action_play" app:showAsAction="always" />
+    <item android:id="@id/action_modes" android:title="@string/action_modes" app:showAsAction="ifRoom">
+        <menu />
+    </item>
+</menu>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="1,4">
+        <TableRow>
+            <TextView android:text="@string/text" />
+            <EditText android:textSize="32.0sp" android:id="@id/edit_text" android:layout_span="4" android:inputType="text" android:imeOptions="actionDone|flagNoExtractUi" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/font" />
+            <Spinner android:id="@id/edit_font_family" android:layout_span="4" />
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@id/text_italic" android:text="@string/italic" />
+            <CheckBox android:id="@id/edit_italic" android:text="" android:onClick="onItalicClick" />
+        </TableRow>
+        <TableRow>
+            <TextView android:id="@id/text_bold" android:text="@string/bold" />
+            <CheckBox android:id="@id/edit_bold" android:text="" android:onClick="onBoldClick" />
+            <CheckBox android:id="@id/edit_outline" android:text="" android:onClick="onOutlineClick" />
+            <TextView android:id="@id/text_outline" android:clickable="true" android:layout_span="2" android:text="@string/outline" android:onClick="onOutlineClick" style="?android:listSeparatorTextViewStyle" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/size" />
+            <Spinner android:id="@id/edit_text_size" android:layout_width="50.0dip" />
+            <androidx.core.widget.Space android:layout_width="0.0dip" />
+            <TextView android:id="@id/text_outline_size" android:text="@string/size" />
+            <Spinner android:id="@id/edit_outline_size" android:layout_width="50.0dip" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/color" />
+            <LinearLayout android:clickable="true" android:onClick="onColorClick">
+                <View android:id="@id/edit_color" android:background="@android:color/white" android:clickable="true" android:layout_width="24.0sp" android:layout_height="24.0sp" android:layout_margin="6.0sp" android:onClick="onColorClick" />
+            </LinearLayout>
+            <androidx.core.widget.Space android:layout_width="0.0dip" />
+            <TextView android:id="@id/text_outline_color" android:text="@string/color" />
+            <LinearLayout android:clickable="true" android:onClick="onOutlineColorClick">
+                <View android:id="@id/edit_outline_color" android:background="@android:color/white" android:clickable="true" android:layout_width="24.0sp" android:layout_height="24.0sp" android:layout_margin="6.0sp" android:onClick="onOutlineColorClick" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</ScrollView>

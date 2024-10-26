@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="ch_editor_pre_de_emph_dis">false</bool>
+    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
+    <bool name="enable_qq_login">true</bool>
+    <bool name="imperial_units">false</bool>
+    <bool name="show_all_squelch_level_section">false</bool>
+    <bool name="small_screen">true</bool>
+</resources>

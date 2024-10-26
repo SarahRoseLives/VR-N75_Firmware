@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/start" android:title="@string/start_recording" app:showAsAction="always" />
+    <item android:id="@id/stop" android:title="@string/stop_recording" app:showAsAction="always" />
+    <item android:id="@id/add_mark" android:title="@string/addMark" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_search_24dp" android:id="@id/search" android:title="@string/search" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_add_24dp" android:id="@id/_import" android:title="@string/_import" />
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:icon="@drawable/ic_add_24dp" android:title="@string/analyze" />
+        <item android:icon="@drawable/ic_add_24dp" android:title="@string/analyze" />
+    </group>
+    <item android:icon="@drawable/ic_arrow_back_black_24dp" android:title="Communicate">
+        <menu>
+            <item android:icon="@drawable/ic_battery_20" android:id="@id/nav_share" android:title="Share" />
+            <item android:icon="@drawable/ic_search_24dp" android:id="@id/nav_send" android:title="Send" />
+        </menu>
+    </item>
+    <item android:title="Communicate 333">
+        <menu>
+            <item android:icon="@drawable/ic_battery_20" android:title="Share" />
+            <item android:icon="@drawable/ic_search_24dp" android:title="Send" />
+        </menu>
+    </item>
+    <item android:title="Communicate 4">
+        <menu>
+            <item android:icon="@drawable/ic_battery_20" android:title="Share" />
+            <item android:icon="@drawable/ic_search_24dp" android:title="Send" />
+        </menu>
+    </item>
+    <item android:title="Communicate 5">
+        <menu>
+            <item android:icon="@drawable/ic_battery_20" android:title="Share" />
+            <item android:icon="@drawable/ic_search_24dp" android:title="Send" />
+        </menu>
+    </item>
+</menu>

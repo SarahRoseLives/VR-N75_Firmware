@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:id="@id/status" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="加载配置" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <HorizontalScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabLayout android:id="@id/tab_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="通用" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="频率范围" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发射功率(高)" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发射功率(低)" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="调制&amp;音量" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/squelchLevel" />
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="输入选频&amp;VCO" />
+                <com.google.android.material.tabs.TabItem android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AGC" />
+            </com.google.android.material.tabs.TabLayout>
+        </HorizontalScrollView>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/tc_main" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dev_main" />
+            <include android:id="@id/tc_vol_and_dev" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dev_vol_and_dev" />
+            <include android:id="@id/tc_freq_range" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dev_freq_range_v1" />
+            <include android:id="@id/tc_tx_power_l" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dev_tx_power" />
+            <include android:id="@id/tc_tx_power_h" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dev_tx_power" />
+            <include android:id="@id/tc_squelch_level" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dev_squelch_level" />
+            <include android:id="@id/tc_agc" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dev_agc" />
+            <include android:id="@id/tc_iba" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/dev_iba" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="发射功率[0,63]" style="?android:listSeparatorTextViewStyle" />
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?dividerHorizontal" app:dividerPadding="0.0dip" app:showDividers="middle">
+            <androidx.gridlayout.widget.GridLayout android:id="@id/r0" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:columnCount="2">
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+            </androidx.gridlayout.widget.GridLayout>
+            <androidx.gridlayout.widget.GridLayout android:id="@id/r1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:columnCount="2">
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+            </androidx.gridlayout.widget.GridLayout>
+            <androidx.gridlayout.widget.GridLayout android:id="@id/r2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:columnCount="2">
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <TextView style="@style/dev_adv_settings_label" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+</ScrollView>

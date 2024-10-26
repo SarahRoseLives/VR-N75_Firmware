@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="108.0dip" android:width="108.0dip" android:viewportWidth="93.1677" android:viewportHeight="93.1677"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="g1" android:pivotX="46.58385" android:pivotY="46.58385" android:scaleX="0.0" android:scaleY="0.0">
+        <group android:translateX="-28.41615" android:translateY="-28.41615">
+            <path android:fillColor="#ffffffff" android:pathData="M75,75m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillAlpha="0.5" android:fillType="evenOdd" />
+        </group>
+    </group>
+    <group android:name="g2" android:pivotX="46.58385" android:pivotY="46.58385" android:scaleX="0.0" android:scaleY="0.0">
+        <group android:translateX="-28.41615" android:translateY="-28.41615">
+            <path android:fillColor="#ffffffff" android:pathData="M75,75m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillAlpha="0.5" android:fillType="evenOdd" />
+        </group>
+    </group>
+    <group android:name="g3" android:pivotX="46.58385" android:pivotY="46.58385" android:scaleX="0.0" android:scaleY="0.0">
+        <group android:translateX="-28.41615" android:translateY="-28.41615">
+            <path android:fillColor="#ffffffff" android:pathData="M75,75m-6,0a6,6 0,1 1,12 0a6,6 0,1 1,-12 0" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+        </group>
+    </group>
+</vector>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?android:textAppearanceListItemSmall" android:ellipsize="marquee" android:id="@id/text1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    <TextView android:textAppearance="?android:textAppearanceListItemSecondary" android:ellipsize="marquee" android:id="@id/text2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

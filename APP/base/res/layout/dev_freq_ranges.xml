@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.gridlayout.widget.GridLayout android:background="@drawable/bg_ch_button" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="7" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:text="限制范围(MHz)" app:layout_columnSpan="3" app:layout_rowSpan="2" style="@style/dev_adv_settings_title" />
+    <TextView android:text="FM" app:layout_columnSpan="2" style="@style/dev_adv_settings_title" />
+    <TextView android:text="AM" app:layout_columnSpan="2" style="@style/dev_adv_settings_title" />
+    <TextView android:text="发射" style="@style/dev_adv_settings_title" />
+    <TextView android:text="接收" style="@style/dev_adv_settings_title" />
+    <TextView android:text="发射" style="@style/dev_adv_settings_title" />
+    <TextView android:text="接收" style="@style/dev_adv_settings_title" />
+    <include layout="@layout/dev_freq_range_row" />
+    <include layout="@layout/dev_freq_range_row" />
+    <include layout="@layout/dev_freq_range_row" />
+    <include layout="@layout/dev_freq_range_row" />
+    <include layout="@layout/dev_freq_range_row" />
+    <include layout="@layout/dev_freq_range_row" />
+    <include layout="@layout/dev_freq_range_row" />
+    <include layout="@layout/dev_freq_range_row" />
+</androidx.gridlayout.widget.GridLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="输入选频" style="?android:listSeparatorTextViewStyle" />
+            <androidx.gridlayout.widget.GridLayout android:id="@id/iba" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <TextView android:textSize="8.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="频率(×10MHz)[0,63]" app:layout_columnWeight="1.0" style="?android:listSeparatorTextViewStyle" />
+                <TextView android:textSize="8.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="输出电压[0,1023]" app:layout_columnWeight="1.0" style="?android:listSeparatorTextViewStyle" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+            </androidx.gridlayout.widget.GridLayout>
+        </LinearLayout>
+        <View android:background="?dividerVertical" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="VCO" style="?android:listSeparatorTextViewStyle" />
+            <androidx.gridlayout.widget.GridLayout android:id="@id/vco" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <TextView android:textSize="8.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="DAC地址[0,15]" app:layout_columnWeight="1.0" style="?android:listSeparatorTextViewStyle" />
+                <TextView android:textSize="8.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="输出电压[0,4095]" app:layout_columnWeight="1.0" style="?android:listSeparatorTextViewStyle" />
+                <EditText style="@style/dev_adv_settings_number.l2" />
+                <EditText style="@style/dev_adv_settings_number.l4" />
+            </androidx.gridlayout.widget.GridLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

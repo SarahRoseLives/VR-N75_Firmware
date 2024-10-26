@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText style="@style/dev_adv_settings_number" />
+    <TextView android:text="-" style="@style/dev_adv_settings_label" />
+    <EditText style="@style/dev_adv_settings_number" />
+    <CheckBox app:layout_gravity="center" />
+    <CheckBox app:layout_gravity="center" />
+    <CheckBox app:layout_gravity="center" />
+    <CheckBox app:layout_gravity="center" />
+</merge>

@@ -1,0 +1,51 @@
+.class public Ll2/a$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Ll2/a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "a"
+.end annotation
+
+
+# instance fields
+.field public a:I
+
+.field public b:I
+
+.field public c:Z
+
+.field public final d:[B
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    const/16 v0, 0x5e0
+
+    .line 1
+    invoke-direct {p0, v0}, Ll2/a$a;-><init>(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Ll2/a$a;->d:[B
+
+    return-void
+.end method

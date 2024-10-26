@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="abc_action_mode_bar">@layout/dw_abc_action_mode_bar</item>
+</resources>

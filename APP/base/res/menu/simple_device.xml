@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/disconnect" android:menuCategory="container" android:title="@string/disconnect" />
+    <item android:id="@id/del" android:menuCategory="container" android:title="@string/delete" />
+    <item android:id="@id/settings" android:menuCategory="container" android:title="@string/settings" />
+</menu>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$ic_splash__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="g3" android:animation="@drawable/$ic_splash__1" />
+    <target android:name="g2" android:animation="@drawable/$ic_splash__2" />
+    <target android:name="g1" android:animation="@drawable/$ic_splash__3" />
+    <target android:name="g1" android:animation="@drawable/$ic_splash__4" />
+</animated-vector>

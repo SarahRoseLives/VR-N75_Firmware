@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="2.0dip" app:showDividers="middle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="?textAppearanceListItem" android:gravity="center" android:id="@id/ch_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="24.0dip" android:minHeight="@dimen/recommended_touch_area_size" />
+    <TextView android:textAppearance="?textAppearanceListItem" android:gravity="center_vertical" android:id="@id/title" android:background="?selectableItemBackground" android:padding="3.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/recommended_touch_area_size" android:layout_weight="1.0" />
+    <com.dw.widget.ActionButton android:id="@id/link" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="fill_parent" android:contentDescription="@string/pickChannel" app:srcCompat="@drawable/ic_link_black_24dp" app:tint="?list_button_tint" />
+    <com.dw.widget.ActionButton android:id="@id/clean" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="fill_parent" android:contentDescription="@string/clear" app:srcCompat="@drawable/ic_clear_24dp" app:tint="?list_button_tint" />
+</androidx.appcompat.widget.LinearLayoutCompat>

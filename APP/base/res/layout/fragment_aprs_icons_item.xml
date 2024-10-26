@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:background="?selectableItemBackground" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+    <TextView android:textAppearance="@style/TextAppearance.ListItemSmall" android:textSize="10.0sp" android:gravity="center" android:id="@id/label" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

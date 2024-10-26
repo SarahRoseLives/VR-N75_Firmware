@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Page.Settings">
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.gridlayout.widget.GridLayout android:id="@id/login" android:layout_width="fill_parent" android:layout_height="fill_parent" app:columnCount="4">
+                <com.dw.android.widget.CardHeaderView app:layout_columnSpan="4" app:layout_gravity="fill_horizontal" app:left_text="@string/login" />
+                <View android:background="?android:listDivider" app:layout_columnSpan="4" app:layout_gravity="fill_horizontal" />
+                <TextView android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/callSign" app:layout_gravity="center_vertical" />
+                <EditText android:id="@id/call_id" android:layout_width="0.0dip" android:maxLines="1" android:ems="10" android:maxLength="6" android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" android:inputType="textCapCharacters|textNoSuggestions" app:layout_gravity="fill_horizontal|center" />
+                <TextView android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" app:layout_gravity="center_vertical" />
+                <TextView android:gravity="center" android:id="@id/ssid" android:focusable="false" android:layout_width="wrap_content" android:minWidth="48.0sp" app:layout_gravity="center_vertical" style="?editTextStyle" />
+                <TextView android:tag="aprs_pass_code" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/password" app:layout_gravity="center_vertical" />
+                <EditText android:id="@id/passcode" android:tag="aprs_pass_code" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="1" android:ems="10" android:password="true" android:maxLength="5" android:inputType="number" app:layout_columnSpan="3" app:layout_gravity="fill_horizontal|center" />
+                <LinearLayout android:tag="aprs_pass_code" app:layout_columnSpan="4" app:layout_gravity="right">
+                    <Button android:id="@id/get_passcode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/getPasscode" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+                    <Button android:id="@id/verification_passcode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/verifyPasscode" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+                </LinearLayout>
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/card_margin">
+            <androidx.gridlayout.widget.GridLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:columnCount="1">
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/gateway" android:padding="8.0dip" android:text="@string/iGateService" app:layout_gravity="fill_horizontal" />
+                <View android:background="?android:listDivider" app:layout_columnSpan="1" app:layout_gravity="fill_horizontal" />
+                <com.dw.android.widget.MultiSelectListPreferenceView android:id="@id/server" app:customizable="true" app:entries="@array/aprs_servers_name" app:layout_gravity="fill_horizontal" app:title="@string/server" app:values="@array/aprs_servers" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/radio2net" android:padding="8.0dip" android:text="@string/radioToInternet" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/net2radio" android:padding="8.0dip" android:text="@string/internetToRadio" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/rx_form_net" android:padding="8.0dip" android:text="@string/receiveMessagesViaInternet" app:layout_gravity="fill_horizontal" />
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/dist" android:background="?selectableItemBackground" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" app:layout_gravity="fill_horizontal" app:maxValue="20000" app:message="@string/descReceivingRange" app:minValue="0" app:rightText="km" app:title="@string/receivingRange" />
+                <TextView android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/iGateDescription" app:layout_gravity="center_vertical" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="@dimen/card_margin">
+            <androidx.gridlayout.widget.GridLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:columnCount="2">
+                <com.dw.android.widget.CardHeaderView app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:left_text="@string/share_location" />
+                <View android:background="?android:listDivider" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/share_location" android:padding="6.0dip" android:text="@string/autoShareLocationOverInternet" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <com.dw.android.widget.TowLineTextView android:gravity="center_vertical" android:id="@id/location_source" android:background="?selectableItemBackground" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:title="@string/locationSource" />
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/location_share_interval" android:background="?selectableItemBackground" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:maxValue="30" app:minValue="1" app:rightText="@string/minute" app:title="@string/interval" />
+                <FrameLayout android:id="@id/icon_frame" android:background="?selectableItemBackground" android:padding="8.0dip" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal">
+                    <TextView android:textAppearance="@style/TextAppearance.ListItem.Title" android:layout_gravity="center|left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/icon" />
+                    <ImageView android:layout_gravity="center|right" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+                </FrameLayout>
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/position_report_add_voltage" android:padding="8.0dip" android:text="@string/sendPowerVoltage" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/position_report_add_freq" android:padding="8.0dip" android:text="@string/sendOperatingFrequency" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <TextView android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/preview" app:layout_gravity="center_vertical" />
+                <TextView android:id="@id/position_report_message_preview" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_gravity="fill_horizontal|center" />
+                <TextView android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message" app:layout_gravity="center_vertical" />
+                <EditText android:id="@id/position_report_message" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/messageInLocationReport" android:maxLines="1" android:singleLine="true" android:maxLength="43" app:layout_gravity="fill_horizontal|center" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

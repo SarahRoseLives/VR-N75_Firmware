@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/edit_channel" android:title="@string/editChannel" />
+    <item android:id="@id/bind_network_channel" android:title="@string/bindNetworkChannel" />
+    <item android:id="@id/unbind_network_channel" android:title="@string/unbindNetworkChannel" />
+    <item android:id="@id/sync_rf_cfg" android:title="@string/syncRadioConfiguration" android:checkable="true" />
+    <item android:id="@id/sync_with_radio" android:title="@string/relayMode" android:checkable="true" />
+    <item android:id="@id/delete" android:title="@string/delete" />
+</menu>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.FrameLayout android:id="@id/connect" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.dw.android.widget.TintTextView android:textAppearance="?textAppearanceListItem" android:layout_gravity="center" android:id="@id/connect_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/connectToControlTheDevice" android:drawablePadding="6.0dip" app:drawableTop="@drawable/ic_connect_24dp" app:tint="?list_button_tint" />
+        <com.dw.android.widget.TintTextView android:layout_gravity="bottom" android:id="@id/need_paired" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/needPairedTip" android:drawablePadding="6.0dip" app:drawableLeft="@drawable/ic_lightbulb_outline_24dp" app:drawableStart="@drawable/ic_lightbulb_outline_24dp" app:tint="?list_button_tint" />
+    </androidx.appcompat.widget.FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/control_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="380.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/screen" android:background="@drawable/bg_ch_button_normal" android:layout_width="0.0dip" android:layout_height="48.0dip" android:layout_weight="1.0">
+                <com.dw.android.widget.TintTextView android:textAppearance="?textAppearanceListItem" android:textSize="16.0sp" android:gravity="center_vertical" android:id="@id/rx_freq_a" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:tint="?list_button_tint" />
+                <com.dw.android.widget.TintTextView android:textAppearance="?textAppearanceListItem" android:textSize="16.0sp" android:gravity="center_vertical" android:id="@id/rx_freq_b" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:tint="?list_button_tint" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/bg_ch_button_normal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <androidx.appcompat.widget.AppCompatImageView android:id="@id/iv_battery" android:layout_width="24.0dip" android:layout_height="@dimen/recommended_touch_area_size" android:layout_marginLeft="0.0dip" android:layout_marginTop="0.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_battery_unknown" app:tint="?list_button_tint" />
+                <Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <com.dw.widget.ActionButton android:id="@id/region" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size" android:contentDescription="@string/changeRegion" app:layout_constraintRight_toLeftOf="@id/settings" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_region_black_24dp" app:tint="?list_button_tint" />
+                <com.dw.widget.ActionButton android:id="@id/radio" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size" android:contentDescription="@string/radio" app:layout_constraintRight_toLeftOf="@id/settings" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_radio_24dp" app:tint="?list_button_tint" />
+                <com.dw.widget.ActionButton android:id="@id/settings" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size" android:contentDescription="@string/dev_settings" app:layout_constraintRight_toLeftOf="@id/disconnect" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_settings_applications_black_24dp" app:tint="?list_button_tint" />
+                <com.dw.widget.ActionButton android:id="@id/disconnect" android:nextFocusRight="@id/cb1" android:nextFocusDown="@id/cb8" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size" android:contentDescription="@string/disconnect" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_disconnect_24dp" app:tint="?list_button_tint" />
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.gridlayout.widget.GridLayout android:id="@id/chs" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.0" app:columnCount="@integer/ch_button_column">
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb1" android:nextFocusLeft="@id/cb16" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb2" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb3" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb4" android:nextFocusRight="@id/cb5" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb5" android:nextFocusLeft="@id/cb4" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb6" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb7" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb8" android:nextFocusRight="@id/cb9" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb9" android:nextFocusLeft="@id/cb8" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb10" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb11" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb12" android:nextFocusRight="@id/cb13" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb13" android:nextFocusLeft="@id/cb12" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb14" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb15" style="@style/ch_button" />
+            <com.dw.ht.widget.ChannelButton android:id="@id/cb16" android:nextFocusRight="@id/cb1" style="@style/ch_button" />
+        </androidx.gridlayout.widget.GridLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/op" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <info.hoang8f.android.segmented.SegmentedGroup android:orientation="horizontal" android:id="@id/power" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="2.0dip" app:sc_border_width="1.0dip" app:sc_corner_radius="0.0dip" app:sc_tint_color="?colorPrimary">
+                <RadioButton android:id="@id/low_power" android:layout_height="wrap_content" android:text="@string/low_power" style="@style/Widget.RadioButton" />
+                <RadioButton android:id="@id/medium_power" android:layout_height="wrap_content" android:text="@string/medium_power" style="@style/Widget.RadioButton" />
+                <RadioButton android:id="@id/high_power" android:layout_height="wrap_content" android:text="@string/high_power" style="@style/Widget.RadioButton" />
+            </info.hoang8f.android.segmented.SegmentedGroup>
+            <info.hoang8f.android.segmented.SegmentedGroup android:orientation="horizontal" android:id="@id/mode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="2.0dip" app:sc_border_width="1.0dip" app:sc_corner_radius="0.0dip" app:sc_tint_color="?colorPrimary">
+                <RadioButton android:id="@id/single_ch" android:layout_height="wrap_content" android:text="@string/single_ch" style="@style/Widget.RadioButton" />
+                <RadioButton android:id="@id/double_ch" android:layout_height="wrap_content" android:text="@string/dual_waiting" style="@style/Widget.RadioButton" />
+                <RadioButton android:id="@id/scan" android:layout_height="wrap_content" android:text="@string/scan" style="@style/Widget.RadioButton" />
+            </info.hoang8f.android.segmented.SegmentedGroup>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <com.dw.android.widget.DWSwitch android:id="@id/radio_switch" android:text="@string/radio" android:layout_weight="1.0" style="@style/control_switch" />
+                <com.dw.android.widget.DWSwitch android:id="@id/offline" android:text="@string/offline" android:layout_weight="1.0" style="@style/control_switch" />
+                <com.dw.android.widget.DWSwitch android:id="@id/on_off" android:text="@string/power" style="@style/control_switch" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

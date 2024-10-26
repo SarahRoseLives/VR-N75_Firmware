@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/dev">
+        <item android:icon="@drawable/ic_volume_off_24dp" android:id="@id/start_monitor" android:visible="false" android:title="@string/start_monitor" app:showAsAction="ifRoom" />
+        <item android:icon="@drawable/ic_volume_up_24dp" android:id="@id/stop_monitor" android:title="@string/stop_monitor" app:showAsAction="ifRoom" />
+        <item android:icon="@drawable/ic_connect_24dp" android:id="@id/connect_audio" android:title="@string/establishVoiceConnection" />
+        <item android:icon="@drawable/ic_disconnect_24dp" android:id="@id/disconnect_audio" android:title="@string/disconnectVoiceConnection" />
+        <item android:id="@id/team" android:title="@string/team">
+            <menu>
+                <item android:id="@id/create_a_team" android:title="@string/createTeam" />
+                <item android:id="@id/join_a_team" android:title="@string/joinTeam" />
+            </menu>
+        </item>
+    </group>
+    <item android:icon="@drawable/ic_search_24dp" android:id="@id/search" android:title="@string/search" app:showAsAction="ifRoom" />
+    <item android:id="@id/signal_gen" android:title="信号发生器" />
+    <item android:id="@id/nearby_people" android:title="@string/nearby_people" />
+    <item android:id="@id/dev_settings" android:visible="false" android:menuCategory="system" android:title="@string/dev_settings" />
+    <item android:id="@id/hm_settings" android:menuCategory="system" android:title="@string/hm_settings" />
+    <item android:id="@id/settings" android:menuCategory="system" android:title="@string/settings" />
+</menu>

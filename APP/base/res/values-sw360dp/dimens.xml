@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_vertical_margin">8.0dip</dimen>
+    <dimen name="dtmf_keyboard_h">40.0mm</dimen>
+    <dimen name="navigation_drawer_width">320.0dip</dimen>
+    <dimen name="number_keyboard_h">220.0dip</dimen>
+    <dimen name="number_text_size">24.0sp</dimen>
+</resources>

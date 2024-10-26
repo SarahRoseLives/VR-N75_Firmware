@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/rename" android:title="@string/rename" />
+    <group android:id="@id/optional">
+        <item android:id="@id/cancel" android:title="@android:string/cancel" />
+        <item android:id="@id/update" android:title="@string/update" />
+        <item android:id="@id/restart" android:title="@string/restart" />
+    </group>
+    <item android:id="@id/use_mobile_data" android:visible="false" android:title="@string/use_mobile_data_download" />
+    <item android:id="@id/delete" android:title="@string/delete" />
+</menu>

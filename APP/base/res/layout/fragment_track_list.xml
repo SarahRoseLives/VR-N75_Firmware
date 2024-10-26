@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layoutManager="LinearLayoutManager" />
+    <TextView android:gravity="center" android:id="@id/empty" android:padding="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/noMembers" />
+</androidx.appcompat.widget.FrameLayout>

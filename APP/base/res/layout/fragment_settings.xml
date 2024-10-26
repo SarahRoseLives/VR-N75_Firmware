@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/activity_vertical_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/activity_horizontal_margin" android:paddingEnd="@dimen/activity_horizontal_margin">
+        <androidx.cardview.widget.CardView android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="3.0dip" app:showDividers="middle">
+                <com.dw.android.widget.TintTextView android:id="@id/user_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/idSignaling" style="@style/Widget.Settings.More" />
+                <com.dw.android.widget.TintTextView android:id="@id/channel_manager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channelManager" style="@style/Widget.Settings.More" />
+                <com.dw.android.widget.TintTextView android:id="@id/region_manager" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/regionManager" style="@style/Widget.Settings.More" />
+                <com.dw.android.widget.TintTextView android:id="@id/aprs_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/aprs_settings" style="@style/Widget.Settings.More" />
+                <com.dw.android.widget.TintTextView android:id="@id/map_offline" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/offline_maps" style="@style/Widget.Settings.More" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="3.0dip" app:showDividers="middle">
+                    <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/simple_mode" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/simpleMode" />
+                    <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/imperial_units" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/imperial_units" />
+                    <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/keep_screen_on" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/keep_screen_on" />
+                    <com.dw.android.widget.NumberPreferenceView android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/save_audio" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:title="@string/saveVoiceHistory" />
+                    <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/mic_gain" android:layout_width="fill_parent" android:layout_height="wrap_content" app:entries="@array/micGainArray" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:maxValue="2" app:title="@string/microphoneGain" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="3.0dip" app:showDividers="middle">
+                    <com.dw.android.widget.ListItemView android:id="@id/ptt_button" android:layout_width="fill_parent" android:layout_height="fill_parent" app:accessory="DisclosureIndicator" app:title="@string/pttButton" />
+                    <com.dw.android.widget.ListItemView android:id="@id/ptt_actions" android:layout_width="fill_parent" android:layout_height="fill_parent" app:accessory="DisclosureIndicator" app:title="@string/ptt_manage" />
+                    <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/ptt_lock" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/pttLock" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+                <com.dw.android.widget.CardHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="@string/tone" />
+                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="3.0dip" app:showDividers="middle">
+                    <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/send_start_tone" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/send_start" />
+                    <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/send_stop_tone" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/send_stop" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+                <com.dw.android.widget.CardHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="@string/morseCode" />
+                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="3.0dip" app:showDividers="middle">
+                    <com.dw.android.widget.NumberPreferenceView android:id="@id/morse_code_speed" android:layout_width="fill_parent" android:layout_height="wrap_content" app:maxValue="200" app:minValue="1" app:rightText="wpm" app:title="@string/speed" />
+                    <com.dw.android.widget.NumberPreferenceView android:id="@id/morse_code_pitch" android:layout_width="fill_parent" android:layout_height="wrap_content" app:maxValue="3000" app:minValue="320" app:rightText="Hz" app:title="@string/morse_code_pitch" />
+                    <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/morse_code_ct" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/start_transmission_signal" />
+                    <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/morse_code_sk" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/end_transmission_signal" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+                <com.dw.android.widget.CardHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="DTMF" />
+                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="3.0dip" app:showDividers="middle">
+                    <com.dw.android.widget.NumberPreferenceView android:id="@id/dtmf_speed" android:layout_width="fill_parent" android:layout_height="wrap_content" app:maxValue="500" app:minValue="10" app:rightText="cpm" app:title="@string/speed" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:id="@id/about" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+                <com.dw.android.widget.CardHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="@string/about" />
+                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="3.0dip" app:showDividers="middle">
+                    <com.dw.android.widget.TintTextView android:id="@id/contact_us" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/contact_us" style="@style/Widget.Settings.More" />
+                    <com.dw.android.widget.TintTextView android:id="@id/user_manual" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/userManual" style="@style/Widget.Settings.More" />
+                    <com.dw.android.widget.ListItemView android:id="@id/check_update" android:layout_width="fill_parent" android:layout_height="wrap_content" app:accessory="DisclosureIndicator" app:title="@string/version" />
+                    <com.dw.android.widget.TintTextView android:id="@id/privacy_policy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/privacy_policy" style="@style/Widget.Settings.More" />
+                    <com.dw.android.widget.TintTextView android:id="@id/open_source_license" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/openSourceLicense" style="@style/Widget.Settings.More" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <TextView android:gravity="center" android:id="@id/copyright" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="6.0dip" />
+    </LinearLayout>
+</ScrollView>

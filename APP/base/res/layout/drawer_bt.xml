@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="?android:windowBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/header" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/nav_header_main" />
+    <FrameLayout android:id="@id/control" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:choiceMode="singleChoice" android:layout_weight="1.0" />
+    <com.dw.widget.BottomLayout android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</androidx.appcompat.widget.LinearLayoutCompat>

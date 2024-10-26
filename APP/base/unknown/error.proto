@@ -1,0 +1,20 @@
+/*
+protoc *.proto --go_out=plugins=grpc:../../ --swift_out=/Users/yangdewang/dw/proj/ios/HT/HT/HT/RPC  --grpc-swift_out=Server=false:/Users/yangdewang/dw/proj/ios/HT/HT/HT/RPC
+*/
+syntax = "proto3";
+option java_package = "com.dw.grpc";
+option go_package = "dw/grpc/exception";
+package dw.grpc;
+enum Code {
+    OK                  = 0;
+    InvalidArgument     =-1;//无效的参数
+    Unavailable         =-2;//不可用
+    Unauthenticated     =-3;//未经身份验证
+    PermissionDenied    =-4;//没有权限
+    Internal            =-5;//内部错误
+    AlreadyExists       =-6;
+    NotFound            =-7;
+}
+message Info {
+    Code code = 1;
+}

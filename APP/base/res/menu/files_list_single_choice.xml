@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="?efp__ic_action_sort" android:id="@id/sort" android:title="@string/efp__sort" app:showAsAction="always" />
+    <item android:icon="?efp__ic_action_storage" android:id="@id/storage" android:title="@string/efp__storage" app:showAsAction="always" />
+    <item android:icon="?efp__ic_action_new_folder" android:id="@id/new_folder" android:title="@string/efp__new_folder" app:showAsAction="always" />
+    <item android:icon="?efp__ic_action_grid" android:id="@id/change_view" android:title="@string/efp__action_grid" app:showAsAction="always" />
+    <item android:icon="?efp__ic_action_ok" android:id="@id/ok" android:title="@android:string/ok" app:showAsAction="always" />
+</menu>

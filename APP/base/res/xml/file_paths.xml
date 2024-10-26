@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path name="download" path="download" />
+    <external-path name="Download" path="Download" />
+    <external-path name="external" path="." />
+    <root-path name="storage" path="/storage" />
+    <cache-path name="cache" path="." />
+    <files-path name="tracks" path="kml/tracks" />
+    <files-path name="ht" path="HT" />
+</paths>

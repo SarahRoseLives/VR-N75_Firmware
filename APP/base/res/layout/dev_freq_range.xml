@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/freq_limits" layout="@layout/dev_freq_ranges" />
+        <LinearLayout android:orientation="vertical" android:id="@id/freq_limits2_and_apc2" android:background="@drawable/bg_ch_button" android:padding="6.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/freq_limits2_en" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="测试频段和功率" />
+            <include android:id="@id/freq_limits2" layout="@layout/dev_freq_ranges" />
+            <androidx.gridlayout.widget.GridLayout android:id="@id/apcLevelGroup" android:background="@drawable/bg_ch_button" android:padding="6.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <TextView android:text="所有设置为0将使用默认发射功率" app:layout_columnSpan="2" style="@style/dev_adv_settings_label" />
+                <TextView android:text="发射功率高[0,63]：" style="@style/dev_adv_settings_label" />
+                <EditText android:id="@id/power_base_h" style="@style/dev_adv_settings_number" />
+                <TextView android:text="发射功率中[0,63]：" style="@style/dev_adv_settings_label" />
+                <EditText android:id="@id/power_base_m" style="@style/dev_adv_settings_number" />
+                <TextView android:text="发射功率低[0,63]：" style="@style/dev_adv_settings_label" />
+                <EditText android:id="@id/power_base_l" style="@style/dev_adv_settings_number" />
+            </androidx.gridlayout.widget.GridLayout>
+        </LinearLayout>
+        <CheckBox android:id="@id/have_radio" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="支持收音机" />
+        <CheckBox android:id="@id/have_speak" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="包含喇叭" />
+        <LinearLayout android:orientation="vertical" android:id="@id/product_config_group" android:background="@drawable/bg_ch_button" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="?dividerHorizontal" android:showDividers="middle">
+            <TextView android:gravity="center" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="设备相关配置\n未使用功能请保持为未选中状态便于兼容未来版本固件" />
+            <androidx.gridlayout.widget.GridLayout android:id="@id/product_config" android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <CheckBox android:text="F1:1846第二版" style="@style/product_cfg_item" />
+                <CheckBox android:text="F2:禁用HFP-AG" style="@style/product_cfg_item" />
+                <CheckBox android:text="F3:多语言" style="@style/product_cfg_item" />
+                <CheckBox android:text="F4" style="@style/product_cfg_item" />
+                <CheckBox android:text="F5" style="@style/product_cfg_item" />
+                <CheckBox android:text="F6" style="@style/product_cfg_item" />
+                <CheckBox android:text="F7" style="@style/product_cfg_item" />
+                <CheckBox android:text="F8" style="@style/product_cfg_item" />
+                <CheckBox android:text="F9" style="@style/product_cfg_item" />
+                <CheckBox android:text="F10" style="@style/product_cfg_item" />
+                <CheckBox android:text="F11" style="@style/product_cfg_item" />
+                <CheckBox android:text="F12" style="@style/product_cfg_item" />
+                <CheckBox android:text="F13" style="@style/product_cfg_item" />
+                <CheckBox android:text="F14" style="@style/product_cfg_item" />
+                <CheckBox android:text="F15" style="@style/product_cfg_item" />
+                <CheckBox android:text="F16" style="@style/product_cfg_item" />
+            </androidx.gridlayout.widget.GridLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

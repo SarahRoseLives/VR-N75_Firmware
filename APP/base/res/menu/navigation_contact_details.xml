@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_forum_24dp" android:id="@id/forum" android:title="@string/records" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/ic_directions_walk_24dp" android:id="@id/track" android:title="@string/track" app:showAsAction="ifRoom" />
+</menu>

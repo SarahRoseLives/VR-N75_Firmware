@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/localServer" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="使用本地服务器" />
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/outputAGC" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="播放时使用 AGC" />
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/outputNS" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="播放时使用 噪音抑制" />
+                <com.google.android.material.switchmaterial.SwitchMaterial android:id="@id/jfTestMode" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="九方测试模式" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="0.0dip" app:showDividers="middle">
+                <com.dw.android.widget.CardHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="轨迹平滑" />
+                <androidx.gridlayout.widget.GridLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                    <TextView android:textAppearance="@style/TextAppearance.ListItemSmall" android:gravity="center_vertical" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" android:text="降噪阀值(m)" app:layout_gravity="top" />
+                    <com.xw.repo.BubbleSeekBar android:id="@id/noiseThreshold" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" app:bsb_max="100.0" app:bsb_min="0.0" app:bsb_progress="10.0" app:bsb_section_count="5" app:bsb_section_text_position="below_section_mark" app:bsb_show_section_text="true" app:bsb_show_thumb_text="true" app:bsb_touch_to_seek="true" app:layout_columnWeight="1.0" app:layout_gravity="center_vertical" />
+                    <TextView android:textAppearance="@style/TextAppearance.ListItemSmall" android:gravity="center_vertical" android:id="@id/vol_label" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" android:text="滤波强度" app:layout_gravity="center_vertical" />
+                    <com.xw.repo.BubbleSeekBar android:id="@id/intensity" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" app:bsb_auto_adjust_section_mark="true" app:bsb_max="5.0" app:bsb_min="0.0" app:bsb_progress="2.0" app:bsb_section_count="5" app:bsb_section_text_position="below_section_mark" app:bsb_show_section_text="true" app:bsb_show_thumb_text="true" app:bsb_touch_to_seek="true" app:layout_columnWeight="1.0" app:layout_gravity="center_vertical" />
+                    <TextView android:textAppearance="@style/TextAppearance.ListItemSmall" android:gravity="center_vertical" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" android:text="抽稀阀值(dm)" app:layout_gravity="top" />
+                    <com.xw.repo.BubbleSeekBar android:id="@id/threshold" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" app:bsb_max="50.0" app:bsb_min="0.0" app:bsb_progress="30.0" app:bsb_section_count="5" app:bsb_section_text_position="below_section_mark" app:bsb_show_section_text="true" app:bsb_show_thumb_text="true" app:bsb_touch_to_seek="true" app:layout_columnWeight="1.0" app:layout_gravity="center_vertical" />
+                    <TextView android:textAppearance="@style/TextAppearance.ListItemSmall" android:gravity="center_vertical" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" android:text="暂存点数" app:layout_gravity="top" />
+                    <com.xw.repo.BubbleSeekBar android:id="@id/points" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" app:bsb_max="8000.0" app:bsb_min="0.0" app:bsb_progress="1000.0" app:bsb_section_count="4" app:bsb_section_text_position="below_section_mark" app:bsb_show_section_text="true" app:bsb_show_thumb_text="true" app:bsb_touch_to_seek="true" app:layout_columnWeight="1.0" app:layout_gravity="center_vertical" />
+                </androidx.gridlayout.widget.GridLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+        <androidx.gridlayout.widget.GridLayout android:padding="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="3">
+            <Button android:id="@id/test_grpc" android:text="Test Grpc" style="@style/test_button" />
+            <Button android:id="@id/test_mic" android:text="麦克风测试" style="@style/test_button" />
+            <Button android:id="@id/open_car_tools" android:text="车辆工具" style="@style/test_button" />
+            <Button android:id="@id/advanced_device_settings" android:text="高级设置" style="@style/test_button" />
+            <Button android:id="@id/tcall" android:text="T-Call" style="@style/test_button" />
+            <Button android:id="@id/main" android:text="Main" style="@style/test_button" />
+            <Button android:id="@id/err_exit" android:text="异常退出" style="@style/test_button" />
+            <Button android:id="@id/users" android:text="网络对讲用户" style="@style/test_button" />
+            <Button android:id="@id/logs" android:text="日志" style="@style/test_button" />
+            <Button android:id="@id/satellite" android:text="卫星" style="@style/test_button" />
+        </androidx.gridlayout.widget.GridLayout>
+        <EditText android:id="@id/bearer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="1" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

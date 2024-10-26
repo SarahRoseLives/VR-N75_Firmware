@@ -1,0 +1,249 @@
+/*
+
+protoc *.proto                                                            \
+--go_out=../                                                              \
+--go-grpc_out=../                                                         \
+--swift_out=/Users/yangdewang/dw/proj/ios/HT/HT/HT/RPC                    \
+--grpc-swift_out=Server=false:/Users/yangdewang/dw/proj/ios/HT/HT/HT/RPC
+
+*/
+syntax = "proto3";
+option java_package = "com.benshikj.ht.rpc";
+option go_package = "./benshikj";
+package benshikj;
+import "google/protobuf/wrappers.proto";
+
+message GetChannelConnectionParmRequest {
+  uint64 channelID                        = 1;//信道ID
+}
+message ChannelMemberAuth {
+  bool ban                                = 1;//禁言
+  bool isAdmin                            = 2;//是管理员
+  int32 callPriority                      = 3;//通话优先权，数字越大优先权越高,相同优先权可以同时讲话，有高优先权的用户说话时低优先权的用户不能说话
+}
+message RfChannelFields {
+  int32 txFreq                            = 1;//发射频率
+  int32 rxFreq                            = 2;//接收频率
+  /**
+   * 发送亚音
+   * [1,1000):数字压音ID
+   * [1000,25030]:模拟压音频率,单位(0.01Hz)
+   */
+  int32 txSubAudio                        = 3;
+  /**
+   * 接收亚音
+   * [1,1000):数字压音ID
+   * [1000,25030]:模拟压音频率,单位(0.01Hz)
+   */
+  int32 rxSubAudio                        = 4;
+  /**
+   * 带宽(Hz)
+   */
+  int32 bandwidth                         = 5;
+}
+message ChannelFields {
+  uint64 channelID                        = 1;//信道ID
+  string name                             = 2;//信道道名称
+  int32 bitRates                          = 3;//语音比特率
+  int32 passcode                          = 4;//加入信道需要的密码,如果设置为0表示不需要密码
+  bool searchable                         = 5;//是否可以被其他用户搜索到
+  RfChannelFields rf                      = 6;//无线电相关配置
+  string location                         = 7;//服务器位置
+}
+message GetChannelConnectionParmResult {
+  string ip                               = 2;//语音服务器ip
+  int32 port                              = 3;//语音服务器端口
+  int32 bitRates                          = 4;//语音比特率
+  ChannelMemberAuth auth                  = 5;//用户在信道中的权限
+  RfChannelFields rfCh                    = 6;//无线电相关配置
+}
+message UserChannel {
+  int64 ownUserId                         = 1;//信道所有者用户ID
+  uint64 channelId                        = 2;//信道ID
+  string name                             = 3;//信道名称
+  ChannelMemberAuth auth                  = 4;//用户在信道中的权限
+  RfChannelFields rf                      = 5;//无线电相关配置
+}
+message GetUserChannelsRequest {
+  int32 offset                            = 1;//返回数据的起始位置
+  int32 limit                             = 2;//返回数据的数量
+}
+message GetUserChannelsResult {
+  repeated UserChannel channels           = 1;//行道信息
+}
+message GetChannelsRequest {
+  string queryText                        = 1;//搜索字符串
+  int32 offset                            = 2;//返回数据的起始位置
+  int32 limit                             = 3;//返回数据的数量
+}
+message IIChannel {
+  uint64 id                               = 1;//信道ID
+  string name                             = 2;//信道名称
+  bool hasPasscode                        = 3;//加入是否需要密码
+  int32 userCount                         = 4;//信道中用户数量
+}
+message IIChannelMember {
+  int64 userID                            = 1;//用户ID
+  bool ban                                = 2;//禁言状态
+  bool isAdmin                            = 3;//是否是管理员
+  int32 callPriority                      = 4;//通话优先权，数字越大优先权越高,相同优先权可以同时讲话，有高优先权的用户说话时低优先权的用户不能说话
+}
+message GetChannelsResult {
+  repeated IIChannel channels             = 1;
+}
+message SaveChannelRequest {
+  ChannelFields channel                   = 1;//信道配置
+}
+message SaveChannelResult {
+  uint64 channelID                        = 1;//信道ID
+}
+message JoinChannelRequest {
+  uint64 channelID                        = 1;//信道ID
+  int32 passcode                          = 2;//信道密码,如果不需要密码设置为0
+}
+message JoinChannelResult {
+}
+message QuitChannelRequest {
+  uint64 channelID                        = 1;//信道ID
+}
+message QuitChannelResult {
+}
+message GetChannelRequest {
+  uint64 channelID                        = 1;//信道ID
+}
+message GetChannelResult {
+  ChannelFields channel                   = 1;//信道配置
+}
+message DeleteChannelRequest {
+  uint64 channelID                        = 1;//信道ID
+}
+message DeleteChannelResult {
+}
+message GetChannelStatusRequest {
+  uint64 channelID                        = 1;//信道ID
+  int64 updateAt                          = 2;//缓存数据的更改时间
+}
+message GetChannelStatusResult {
+  repeated int64 onlineUser               = 1;//在线用户ID列表
+  int64 updateAt                          = 2;//数据更改时间
+}
+message GetChannelMembersRequest {
+  uint64 channelID                        = 1;//信道ID
+}
+message GetChannelMembersResult {
+  int64 ownUserID                         = 1;//信道所有者用户ID
+  repeated IIChannelMember members        = 2;//信道成员信息列表
+}
+message RemoveUserFromChannelRequest {
+  uint64 channelID                        = 1;//信道ID
+  int64 userID                            = 2;//用户ID
+}
+message RemoveUserFromChannelResult {
+
+}
+
+message SetChannelMemberAuthRequest {
+  uint64 channelID                        = 1;//信道ID
+  int64 userID                            = 2;//用户ID
+  google.protobuf.BoolValue ban           = 3;//禁言
+  google.protobuf.BoolValue isAdmin       = 4;//是管理员
+  google.protobuf.Int32Value callPriority = 5;//通话优先权，数字越大优先权越高,相同优先权可以同时讲话，有高优先权的用户说话时低优先权的用户不能说话
+}
+message SetChannelMemberAuthResult {
+
+}
+message ServerLocation {
+  string id                               = 1;//服务器ID
+  string name                             = 2;//服务器名称
+}
+message GetServerLocationsRequest {
+}
+message GetServerLocationsResult {
+  repeated ServerLocation locations       = 1;//音频服务器位置
+}
+message GetImUrlRequest {
+}
+message GetImUrlResult {
+  string url                              = 1;//连接IM服务器的URL
+}
+//IM服务器为用户提供的服务
+service IHT {
+  //加载信道
+  rpc GetChannels(GetChannelsRequest) returns (GetChannelsResult){}
+  //获取用户信道
+  rpc GetUserChannels(GetUserChannelsRequest) returns (GetUserChannelsResult){}
+  //获取信道连接参数
+  rpc GetChannelConnectionParm (GetChannelConnectionParmRequest) returns (GetChannelConnectionParmResult){}
+  //保存信道配置如果没有提供ID创建新信道
+  rpc SaveChannel(SaveChannelRequest) returns (SaveChannelResult){}
+  //删除信道
+  rpc DeleteChannel(DeleteChannelRequest) returns (DeleteChannelResult){}
+  //请求加入信道
+  rpc JoinChannel(JoinChannelRequest) returns (JoinChannelResult){}
+  //请求退出信道
+  rpc QuitChannel(QuitChannelRequest) returns (QuitChannelResult){}
+  //加载信道配置用于编辑
+  rpc GetChannel(GetChannelRequest) returns (GetChannelResult){}
+  //加载信道状态
+  rpc GetChannelStatus(GetChannelStatusRequest) returns (GetChannelStatusResult){}
+  //加载信道状态
+  rpc GetChannelMembers(GetChannelMembersRequest) returns (GetChannelMembersResult){}
+  //设置用户在信道的权限
+  rpc SetChannelMemberAuth(SetChannelMemberAuthRequest) returns (SetChannelMemberAuthResult){}
+  //从信道移除用户
+  rpc RemoveUserFromChannel(RemoveUserFromChannelRequest) returns (RemoveUserFromChannelResult){}
+  //加载可用服务器位置
+  rpc GetServerLocations(GetServerLocationsRequest) returns (GetServerLocationsResult){}
+  //获取IM服务器URL
+  rpc GetImUrl (GetImUrlRequest) returns (GetImUrlResult){};
+}
+message UserStatus {
+  int64 userID = 1;
+  bool online  = 2;
+}
+message Message {
+  enum Type {
+    Undefined   = 0;
+    Text        = 1;
+    Photo       = 2;
+    AFSK        = 3;
+  }
+  Type type       = 1;
+  oneof data {
+    bytes raw               = 2;
+    UserStatus userStatus   = 3;
+  }
+}
+
+enum IdentifyType {
+  Undefined       = 0;
+  UserID          = 1;
+  GroupID         = 2;
+}
+
+message SendMessageRequest {
+  IdentifyType targetType = 1;
+  int64 target            = 2;//到(用户/组ID)
+  Message data            = 3;
+}
+
+message SendMessageResult {
+}
+
+message ReceiveMessageRequest {
+}
+
+message ReceiveMessageResult {
+  IdentifyType sourceType = 1;
+  int64 source            = 2;//源(用户/组ID)
+  IdentifyType targetType = 3;
+  int64 target            = 4;//到(用户/组ID)
+  Message data            = 5;
+}
+
+service IM {
+  //发送消息
+  rpc SendMessage(SendMessageRequest) returns (SendMessageResult){};
+  //接收消息
+  rpc ReceiveMessage(stream ReceiveMessageRequest) returns (stream ReceiveMessageResult){};
+}

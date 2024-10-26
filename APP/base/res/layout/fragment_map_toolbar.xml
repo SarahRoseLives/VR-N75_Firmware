@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.dw.widget.ActionButton android:id="@id/mtf_map_layer" android:contentDescription="@string/map_type" app:srcCompat="@drawable/ic_mp_maplayer" style="@style/map.button" />
+    <com.dw.widget.ActionButton android:id="@id/mtf_my_loc" android:contentDescription="@string/backToMyPlace" app:srcCompat="@drawable/ic_my_location_black_24dp" style="@style/map.button.tint" />
+    <com.dw.widget.ActionButton android:id="@id/mtf_starred" android:contentDescription="@string/onlyShowFollowingUsers" app:srcCompat="@drawable/ic_star_black_24dp" style="@style/map.button.tint" />
+    <com.dw.widget.ActionButton android:id="@id/mtf_time" android:contentDescription="@string/time" app:srcCompat="@drawable/ic_time_24dp" style="@style/map.button.tint" />
+    <com.dw.widget.ActionButton android:id="@id/mtf_track" android:contentDescription="@string/trackManager" app:srcCompat="@drawable/ic_track_black_24dp" style="@style/map.button.tint" />
+</LinearLayout>

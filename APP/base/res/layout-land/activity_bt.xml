@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/bmap" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.dw.widget.InsetsLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:insets="top|bottom|left|right">
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/cm" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <androidx.fragment.app.FragmentContainerView android:name="com.dw.ht.fragments.MapToolbarFragment" android:id="@id/map_tools_fragment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginEnd="6.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <androidx.cardview.widget.CardView android:id="@id/appbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="8.0dip" app:cardCornerRadius="8.0dip" app:cardElevation="4.0dip" app:layout_constraintEnd_toStartOf="@id/appbar_padding" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                    <com.google.android.material.appbar.AppBarLayout android:theme="@style/AppTheme.Map.AppBarOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:popupTheme="@style/AppTheme.PopupOverlay" />
+                        <ViewStub android:id="@id/search_bar" android:layout="@layout/search_bar_stub" android:inflatedId="@id/search_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        <View android:id="@id/tabBarDivider" android:background="?android:listDivider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                        <com.google.android.material.tabs.TabLayout android:id="@id/tabBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabGravity="fill" app:tabIndicatorColor="#ffffffff" app:tabMode="fixed">
+                            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message" />
+                            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/members" />
+                            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/map" />
+                        </com.google.android.material.tabs.TabLayout>
+                    </com.google.android.material.appbar.AppBarLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.constraintlayout.widget.Group android:id="@id/appbar_padding" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/appbar" app:layout_constraintTop_toTopOf="parent" />
+                <androidx.fragment.app.FragmentContainerView android:name="com.dw.ht.fragments.DeviceStatusFragment" android:id="@id/dev_status" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/appbar" />
+                <androidx.fragment.app.FragmentContainerView android:id="@id/sm" android:tag="sm" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/bottom_bar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <FrameLayout android:id="@id/container" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toTopOf="@id/bottom_bar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/appbar">
+                    <androidx.fragment.app.FragmentContainerView android:name="com.dw.ht.fragments.MMFragment" android:id="@id/mm_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/view_select" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="0.0dip" android:layout_marginEnd="0.0dip" app:layout_constraintEnd_toStartOf="@id/map_tools_fragment" app:layout_constraintTop_toTopOf="@id/map_tools_fragment">
+                    <com.dw.widget.ActionButton android:id="@id/view_talk_list" android:contentDescription="@string/message" app:srcCompat="@drawable/ic_question_answer_black_24dp" style="@style/map.button.tint" />
+                    <com.dw.widget.ActionButton android:id="@id/view_contacts" android:contentDescription="@string/contacts" app:srcCompat="@drawable/ic_people_black_24dp" style="@style/map.button.tint" />
+                </LinearLayout>
+                <androidx.fragment.app.FragmentContainerView android:name="com.dw.ht.fragments.BottomActionFragment" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="4.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.dw.widget.InsetsLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="center|top" android:id="@id/pttButton" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:tint="#ffffffff" android:contentDescription="@string/hold_to_speak" app:fabCustomSize="80.0dip" app:fabSize="normal" app:layout_anchor="@id/pttButton_help" app:layout_anchorGravity="top|center" app:srcCompat="@drawable/ic_mic_black_24dp" />
+        <com.dw.widget.BottomLayout android:layout_gravity="center|top" android:id="@id/pttButton_help" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_anchor="@id/bottom_sheet" />
+        <androidx.core.widget.NestedScrollView android:id="@id/bottom_sheet" android:background="@android:color/background_light" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="6.0dip" app:behavior_hideable="true" app:behavior_skipCollapsed="true" app:layout_behavior="@string/bottom_sheet_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <androidx.fragment.app.FragmentContainerView android:name="com.dw.ht.fragments.BDListFragment" android:layout_gravity="start" android:id="@id/navigation_drawer" android:layout_width="@dimen/navigation_drawer_width" android:layout_height="fill_parent" />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="3.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dw.android.plot.PlotView android:id="@id/plot" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="3.0" />
+    <TextView android:id="@id/pwm" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:id="@id/text" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <Button android:id="@id/start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:text="@string/start_monitor" style="@android:style/Widget.Material.Button.Borderless.Colored" />
+</LinearLayout>

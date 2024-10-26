@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/_import" app:showAsAction="always">
+        <menu>
+            <item android:id="@id/importDeviceChannels" android:title="@string/importDeviceChannels" app:showAsAction="ifRoom" />
+            <item android:id="@id/importFromFile" android:title="@string/file" />
+        </menu>
+    </item>
+    <item android:id="@id/add" android:title="@string/_new" app:showAsAction="ifRoom" />
+</menu>

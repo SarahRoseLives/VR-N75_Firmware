@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/zoom_controls" android:background="@drawable/bg_map_button_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="?android:listDivider" android:showDividers="middle" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.dw.widget.ActionButton android:id="@id/zoom_in" android:contentDescription="@string/zoom_in" app:srcCompat="@drawable/ic_add_24dp" style="@style/map.button.zoom" />
+    <com.dw.widget.ActionButton android:id="@id/zoom_out" android:contentDescription="@string/zoom_out" app:srcCompat="@drawable/ic_minus" style="@style/map.button.zoom" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/save" android:title="@string/save" app:showAsAction="always" />
+    <item android:id="@id/backup" android:title="添加当前设置到设置列表" />
+    <item android:id="@id/signal_gen" android:title="信号发生器" />
+    <item android:id="@id/ShowDebugScreen" android:title="显示调试屏幕" />
+    <item android:id="@id/recertification" android:title="重新注册设备" />
+    <item android:id="@id/show_rf_status" android:title="显示设备状态" />
+    <item android:id="@id/RestoreFactorySettings" android:title="恢复出厂状态" />
+    <item android:id="@id/RestoreAllSettings" android:title="恢复到固件配置(将清除所有工厂配置)" />
+    <item android:id="@id/test" android:title="Test" />
+</menu>

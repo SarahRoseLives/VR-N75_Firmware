@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/audio" android:title="@string/voice" />
+    <item android:id="@id/morse_code" android:title="@string/morseCode" />
+    <item android:id="@id/text" android:title="@string/text" />
+    <item android:id="@id/dtmf" android:title="DTMF" />
+    <item android:id="@id/picture" android:title="@string/picture" />
+</menu>

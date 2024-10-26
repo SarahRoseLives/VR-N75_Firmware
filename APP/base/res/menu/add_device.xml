@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/add_dev" android:title="@string/walkie_talkie" />
+    <item android:id="@id/add_ptt" android:title="@string/ptt_hm" />
+    <item android:id="@id/buy" android:title="@string/buy_now" />
+</menu>

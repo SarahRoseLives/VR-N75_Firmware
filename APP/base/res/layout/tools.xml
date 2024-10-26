@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+        <com.dw.android.widget.TintTextView android:id="@id/add_dev" android:text="@string/bindNewDevice" app:drawableLeft="@drawable/ic_add_24dp" style="@style/drawer.menu" />
+        <com.dw.android.widget.TintTextView android:id="@id/add_iich" android:text="@string/joinNetworkChannel" app:drawableLeft="@drawable/ic_add_24dp" style="@style/drawer.menu" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tools" style="?android:listSeparatorTextViewStyle" />
+        <androidx.gridlayout.widget.GridLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="@integer/drawer_tools_column_count">
+            <com.dw.android.widget.TintTextView android:id="@id/aprs" android:text="@string/aprs" app:drawableLeft="@drawable/ic_place_24dp" style="@style/drawer.tools.item" />
+            <com.dw.android.widget.TintTextView android:id="@id/audio" android:text="@string/audio_connection" app:drawableLeft="@drawable/ic_settings_input_component_black_24dp" style="@style/drawer.tools.item" />
+            <com.dw.android.widget.TintTextView android:id="@id/mdc_monitor" android:text="@string/mdcMonitor" app:drawableLeft="@drawable/ic_search_24dp" style="@style/drawer.tools.item" />
+            <com.dw.android.widget.TintTextView android:id="@id/morse_code" android:text="@string/morseCode" app:drawableLeft="@drawable/ic_morse_code" style="@style/drawer.tools.item" />
+            <com.dw.android.widget.TintTextView android:id="@id/dtmf" android:text="@string/dtmf_decode" app:drawableLeft="@drawable/ic_dialpad_24dp" style="@style/drawer.tools.item" />
+        </androidx.gridlayout.widget.GridLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

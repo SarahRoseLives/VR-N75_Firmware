@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_location_city_black_24dp" android:id="@id/all" android:title="@string/all_offline" />
+    <item android:icon="@drawable/ic_file_download_black_24dp" android:id="@id/download" android:title="@string/download_offline" />
+</menu>

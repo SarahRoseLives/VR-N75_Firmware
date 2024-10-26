@@ -1,0 +1,236 @@
+/*
+
+protoc *.proto                                                            \
+--go_out=../                                                              \
+--go-grpc_out=../                                                         \
+--swift_out=/Users/yangdewang/dw/proj/ios/HT/HT/HT/RPC                    \
+--grpc-swift_out=Server=false:/Users/yangdewang/dw/proj/ios/HT/HT/HT/RPC
+
+*/
+syntax = "proto3";
+option java_package = "com.benshikj.ht.rpc";
+option go_package = "./benshikj";
+package benshikj;
+enum StatusCode {
+  ok = 0;
+  ErrNameOrPassword = 1;
+  ErrUserHaveNoPassword = 2;
+  ErrNotLogin = 3;
+  ErrUnconfirmed = 4;
+}
+message UserPublicProfile {
+  int64 uid = 1;          //用户ID
+  string username = 2;    //用户名
+  string nickname = 3;    //昵称
+  bytes photo = 4;        //用户头像
+  int64 updateAt = 5;     //数据最后更改时间
+}
+
+message DeviceInformation {
+  string did = 1;         //设备ID
+}
+
+message UserPublicProfileRequest {
+  int64 uid = 1;          //用户ID
+  int64 syncAt = 2;       //返回新信息如果用户信息已经更改在这之后
+}
+
+message UserPublicProfileResult {
+  enum Status {
+    ok = 0;
+    unchanged = 1;
+  }
+  oneof profile {
+    Status status = 1;
+    UserPublicProfile data = 2;
+  }
+}
+
+message OpenIDLoginRequest {
+  enum Type {
+    QQ = 0;
+    WeiXin = 1;
+    Apple = 2;
+    Google = 3;
+  }
+  Type type = 1;          //id 类型
+  string openID = 2;
+  string accessToken = 3;
+  string nickname = 4;
+}
+
+message LoginRequest {
+  string usernameOrEmail = 1;
+  string password = 2;
+}
+
+message LoginResult {
+  string accessToken = 1;
+  int64 accessTokenExpires = 2; //unix (s)
+  string refreshToken = 3;
+  int64 refreshTokenExpires = 4; //unix (s)
+  StatusCode code = 5;
+}
+message LoadProfileRequest {
+  bool loadPhoto = 1;     //同时加载图片
+  int64 syncAt = 2;       //返回新信息如果用户信息已经更改在这之后 unix (s)
+}
+message UserProfile {
+  int64 uid = 1;          //用户ID
+  string username = 2;    //用户名
+  string nickname = 3;    //昵称
+  string email = 4;       //用于邮箱地址
+  bytes photo = 5;        //用户头像
+  int64 updateAt = 6;     //数据最后更改时间 unix (s)
+}
+message LoadProfileResult {
+  enum Status {
+    ok = 0;
+    unchanged = 1;
+  }
+  oneof profile {
+    Status status = 1;
+    UserProfile data = 2;
+  }
+}
+
+message UpdateProfileRequest {
+  message Update {
+    bool nickname = 1;
+    bool photo = 2;
+  }
+  UserProfile data = 1;
+  Update update = 2;
+}
+message UpdateProfileResult {
+
+}
+
+message SetUserPhotoRequest {
+  bytes photo = 1;
+}
+message GetUserPhotoRequest {
+  int64 syncAt = 1;       //返回新信息如果用户信息已经更改在这之后
+}
+message GetUserPhotoResult {
+  bytes photo = 1;
+}
+
+message LogoutResult {
+  StatusCode code = 1;
+}
+
+message LogoutRequest {
+  string accessToken = 1;
+  string refreshToken = 2;
+}
+
+message FreshAccessTokenRequest {
+  string accessToken = 1;
+  string refreshToken = 2;
+}
+
+message FreshAccessTokenResult {
+  string accessToken = 1;
+  int64 accessTokenExpires = 2; //unix (s)
+  string refreshToken = 3;
+  int64 refreshTokenExpires = 4; //unix (s)
+  StatusCode code = 5;
+}
+
+message GetUserIDsRequest {
+  int32 offset = 1;
+  int32 limit = 2;
+}
+
+message GetUserIDsResult {
+  repeated int64 userIDs = 1;
+}
+
+message DeleteUserRequest {
+  repeated int64 userIDs = 1;
+}
+
+message DeleteUserResult {
+}
+
+message GetStatusRequest {
+}
+
+message GetStatusResult {
+  int64 userCount = 1;
+}
+
+enum ActionForUser {
+  Nop           = 0;
+  Delete        = 1;  //删除用户和相关数据
+  Lock          = 2;  //锁定用户避免他登录
+  Logout        = 3;  //清除用户的登录状态
+}
+
+message DoActionForUsersRequest {
+  repeated ActionForUser actions = 1;
+  repeated int64 userIDs        = 2;
+}
+
+message DoActionForUsersResult {
+}
+
+message UserInfo {
+  int64 uid = 1;          //用户ID
+  string username = 2;    //用户名
+  string nickname = 3;    //昵称
+}
+
+message GetUserInfosRequest {
+  string queryText                        = 1;//搜索字符串
+  int32 offset                            = 2;//返回数据的起始位置
+  int32 limit                             = 3;//返回数据的数量
+}
+
+message GetUserInfosResult {
+  repeated UserInfo users                 = 1;//用户信息
+}
+
+message GetPushMessageRequest {
+  int64 messageID                         = 1;//应用已经成功接收到的最后一个消息的ID
+  int32 limit                             = 2;//限制返回的消息数量
+}
+message PushMessage {
+  string messageID                        = 1;//消息ID
+  string title                            = 2;//消息标题
+  string message                          = 3;//消息内容
+}
+message GetPushMessageResult {
+  repeated PushMessage messages           = 1;//消息
+}
+
+service User {
+  //获取用户的公开信息
+  rpc GetPublicProfile (UserPublicProfileRequest) returns (UserPublicProfileResult){}
+  //登录
+  rpc Login (LoginRequest) returns (LoginResult){}
+  //使用open id登录
+  rpc OpenIDLogin (OpenIDLoginRequest) returns (LoginResult){}
+  //退出
+  rpc Logout (LogoutRequest) returns (LogoutResult){}
+  rpc FreshAccessToken (FreshAccessTokenRequest) returns (FreshAccessTokenResult){}
+  //获取用户信息
+  rpc LoadProfile (LoadProfileRequest) returns (LoadProfileResult){}
+  //更改用户信息
+  rpc UpdateProfile (UpdateProfileRequest) returns (UpdateProfileResult){}
+  //获取所有用户ID需要管理员权限
+  rpc GetUserIDs (GetUserIDsRequest) returns (GetUserIDsResult);
+  //获取用户信息
+  rpc GetUserInfos (GetUserInfosRequest) returns (GetUserInfosResult);
+  //删除用户(需要管理员权限)
+  rpc DeleteUsers (DeleteUserRequest) returns (DeleteUserResult);
+  //获取状态信息需要管理员权限
+  rpc GetStatus (GetStatusRequest) returns (GetStatusResult);
+  //执行动作对用户(需要管理员权限)
+  rpc DoActionForUsers (DoActionForUsersRequest) returns (DoActionForUsersResult);
+  //获取推送信息
+  rpc GetPushMessage (GetPushMessageRequest) returns (GetPushMessageResult);
+  //rpc SetPhoto (SetUserPhotoRequest) returns (Void){}
+  //rpc GetPhoto (GetUserPhotoRequest) returns (GetUserPhotoResult){}
+}

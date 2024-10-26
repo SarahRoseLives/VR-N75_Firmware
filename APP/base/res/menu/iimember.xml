@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/set_ban" android:title="@string/setBan" />
+    <item android:id="@id/clr_ban" android:title="@string/cancelBan" />
+    <group android:id="@id/own">
+        <item android:id="@id/set_as_admin" android:title="@string/setAsAdmin" />
+        <item android:id="@id/cancel_admin_right" android:title="@string/cancelAdminRight" />
+        <item android:id="@id/delete" android:title="@string/delete" />
+    </group>
+    <group android:id="@id/admin" android:visible="false">
+        <item android:id="@id/lock" android:title="锁定用户" />
+    </group>
+</menu>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <GridLayout android:id="@id/gridLayout" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="宽带模拟接收增益" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/wide_analog_gain" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="宽带数字接收增益" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/wide_digital_gain" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <androidx.legacy.widget.Space android:layout_height="10.0dip" android:layout_columnSpan="2" />
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="窄带模拟接收增益" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/narrow_analog_gain" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="窄带数字接收增益" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/narrow_digital_gain" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <androidx.legacy.widget.Space android:layout_height="10.0dip" android:layout_columnSpan="2" />
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="宽带话音调制度" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/wide_audio_deviation" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:gravity="right" android:layout_gravity="center|right" android:id="@id/vhf_wide_audio_deviation_l" android:layout_height="wrap_content" android:text="VHF宽带话音调制度\n只用于6818方案\n0表示不区分频段" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/vhf_wide_audio_deviation" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="模拟亚音调制度" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/ctcss_deviation" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <androidx.legacy.widget.Space android:layout_height="10.0dip" android:layout_columnSpan="2" />
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="窄带话音调制度" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/narrow_audio_deviation" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:gravity="right" android:layout_gravity="center|right" android:id="@id/vhf_narrow_audio_deviation_l" android:layout_height="wrap_content" android:text="VHF窄带话音调制度\n只用于6818方案\n0表示不区分频段" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/vhf_narrow_audio_deviation" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="数字亚音调制度" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/dtcs_deviation" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <androidx.legacy.widget.Space android:layout_height="10.0dip" android:layout_columnSpan="2" />
+            <TextView android:layout_gravity="center|right" android:layout_height="wrap_content" android:text="麦克风增益" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/mic_gain" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:layout_gravity="center|right" android:id="@id/vco_pa_l" android:layout_height="wrap_content" android:text="VOC PA" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/vco_pa" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:layout_gravity="center|right" android:id="@id/vco_offset_l" android:layout_height="wrap_content" android:text="VOC 偏移(KHz)" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/vco_offset" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+            <TextView android:layout_gravity="center|right" android:id="@id/data_dev_l" android:layout_height="wrap_content" android:text="信令调制度" />
+            <Spinner android:layout_gravity="fill_horizontal|center" android:id="@id/data_dev" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" />
+        </GridLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <EditText android:id="@id/de_emph_coeffs" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="0.071415901184082 0.142831802368164 0.071415901184082 1 -1.11492419242859 0.400587797164917" android:hint="去加重参数" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:layout_constraintEnd_toStartOf="@id/de_emph_coeffs_save" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <Button android:id="@id/de_emph_coeffs_paste" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:text="粘贴" android:layout_marginEnd="8.0dip" app:layout_constraintBottom_toTopOf="@id/de_emph_coeffs_save" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+            <Button android:id="@id/de_emph_coeffs_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="保存" android:layout_marginEnd="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

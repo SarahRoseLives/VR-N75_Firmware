@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/map" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="1.0" />
+    <androidx.cardview.widget.CardView android:visibility="visible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginTop="16.0dip" android:layout_marginEnd="16.0dip" app:layout_constraintBottom_toTopOf="@id/guideline_h" app:layout_constraintDimensionRatio="2:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toStartOf="@id/guideline_v" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.0">
+        <FrameLayout android:id="@id/smap" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView android:id="@id/info_card" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.fragment.app.FragmentContainerView android:name="com.dw.ht.satellite.SatelliteInfoFragment" android:id="@id/info" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/guideline_v" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.65" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/guideline_h" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.35" />
+</androidx.constraintlayout.widget.ConstraintLayout>

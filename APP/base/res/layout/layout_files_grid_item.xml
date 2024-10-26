@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.cardview.widget.CardView android:layout_gravity="center" android:background="?selectableItemBackground" android:duplicateParentState="true" android:layout_width="@dimen/files_grid_item_size" android:layout_height="@dimen/files_grid_item_size" android:layout_margin="@dimen/files_grid_item_margin">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/thumbnail" android:layout_width="@dimen/files_grid_item_thumbnail_size" android:layout_height="@dimen/files_grid_item_thumbnail_size" android:layout_marginTop="@dimen/files_grid_item_thumbnail_margin" android:scaleType="centerInside" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@string/efp__app_name" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="@dimen/files_grid_filename_text_size" android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/filename" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/files_grid_item_text_margin_side" android:layout_marginRight="@dimen/files_grid_item_text_margin_side" android:maxLines="2" android:layout_below="@id/thumbnail" android:layout_centerHorizontal="true" android:layout_marginStart="@dimen/files_grid_item_text_margin_side" android:layout_marginEnd="@dimen/files_grid_item_text_margin_side" />
+            <androidx.appcompat.widget.AppCompatCheckBox android:id="@id/checkbox" android:background="@android:color/transparent" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignRight="@id/thumbnail" android:layout_alignBottom="@id/thumbnail" android:layout_alignEnd="@id/thumbnail" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

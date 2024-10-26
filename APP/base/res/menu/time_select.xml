@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/morning" android:title="@string/reminder_time_morning" />
+    <item android:id="@id/afternoon" android:title="@string/reminder_time_afternoon" />
+    <item android:id="@id/evening" android:title="@string/reminder_time_evening" />
+    <item android:id="@id/night" android:title="@string/reminder_time_night" />
+    <item android:id="@id/custom" android:title="@string/reminder_time_custom" />
+</menu>

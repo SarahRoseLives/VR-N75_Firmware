@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="6.0dip">
+        <TextView android:textAppearance="?textAppearanceListItem" android:id="@id/text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+        <TextView android:textAppearance="?textAppearanceListItem" android:id="@id/text2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+        <TextView android:textAppearance="?textAppearanceListItem" android:id="@id/text3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4.0dip" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

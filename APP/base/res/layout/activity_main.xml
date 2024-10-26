@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <om.sstvencoder.CropView android:id="@id/cropView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" />
+    <RelativeLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:orientation="horizontal" android:id="@id/progressBar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:progressBarStyleHorizontal" />
+        <TextView android:id="@id/progressBarText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/progressBar" />
+        <ProgressBar android:orientation="horizontal" android:id="@id/progressBar2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/progressBarText" style="?android:progressBarStyleHorizontal" />
+        <TextView android:id="@id/progressBarText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/progressBar2" />
+    </RelativeLayout>
+</RelativeLayout>

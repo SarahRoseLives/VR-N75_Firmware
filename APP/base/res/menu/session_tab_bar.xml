@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_question_answer_black_24dp" android:id="@id/message" android:title="@string/message" />
+    <item android:icon="@drawable/ic_people_black_24dp" android:id="@id/contacts" android:title="@string/members" />
+    <item android:icon="@drawable/ic_map_24dp" android:id="@id/map" android:title="@string/map" />
+</menu>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/sort" android:title="@string/sortOrder">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@id/sort_by_call_sign" android:title="@string/callSign" />
+                <item android:id="@id/sort_by_time" android:title="@string/time" />
+            </group>
+        </menu>
+    </item>
+    <item android:id="@id/clean" android:title="@string/clear" app:showAsAction="ifRoom" />
+</menu>

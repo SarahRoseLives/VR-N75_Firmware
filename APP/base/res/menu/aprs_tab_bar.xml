@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_message_black_24dp" android:id="@id/message" android:title="@string/message" />
+    <item android:icon="@drawable/ic_map_24dp" android:id="@id/map" android:title="@string/map" />
+</menu>

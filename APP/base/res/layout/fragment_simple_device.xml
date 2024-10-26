@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/recommended_touch_area_size">
+            <TextView android:textAppearance="@style/TextAppearance.ListItem.Title" android:gravity="center_vertical" android:id="@id/l_title" android:padding="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <com.dw.widget.ActionButton android:id="@id/headset_mic" android:layout_width="wrap_content" android:layout_height="fill_parent" app:srcCompat="@drawable/ic_headset_mic_black_24dp" app:tint="@color/status_button_tint" />
+            <com.dw.widget.ActionButton android:id="@id/bt_link" android:layout_width="wrap_content" android:layout_height="fill_parent" app:srcCompat="@drawable/ic_ht_black_24dp" app:tint="?list_button_tint" />
+            <com.dw.widget.ActionButton android:id="@id/monitor" android:layout_width="wrap_content" android:layout_height="fill_parent" app:srcCompat="@drawable/ic_volume_off_24dp" app:tint="?list_button_tint" />
+            <com.dw.widget.ActionButton android:id="@id/more" android:layout_width="wrap_content" android:layout_height="fill_parent" android:contentDescription="@string/more" app:srcCompat="@drawable/ic_more_vert_black_24dp" app:tint="?list_button_tint" />
+        </LinearLayout>
+        <fragment android:id="@id/dev_status_fragment" android:tag="s_dev_status" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.dw.ht.fragments.DeviceStatusFragment" />
+        <TextView android:gravity="center" android:id="@id/message" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/makeSureInPairingModeAndOpenGps" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

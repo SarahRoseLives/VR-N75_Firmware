@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="@style/TextAppearance.ListItem.Title" android:ellipsize="marquee" android:id="@id/title" android:fadingEdge="horizontal" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        <TextView android:textAppearance="@style/TextAppearance.ListItem.Subtitle" android:id="@id/summary" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
+    </LinearLayout>
+    <androidx.appcompat.widget.SwitchCompat android:id="@id/_switch" android:focusable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/recommended_touch_area_size" />
+</merge>

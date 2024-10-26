@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/ic_add_24dp" android:id="@id/add" android:title="@string/newChannel" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/baseline_import_export_24" android:id="@id/import_export" android:title="@string/import_export" app:showAsAction="always">
+        <menu>
+            <item android:id="@id/_import" android:title="@string/_import" />
+            <item android:id="@id/export" android:title="@string/export" />
+        </menu>
+    </item>
+    <item android:icon="@drawable/ic_search_24dp" android:id="@id/search" android:title="@string/search" app:showAsAction="ifRoom" />
+</menu>

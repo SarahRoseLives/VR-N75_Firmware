@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:showDividers="middle">
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/title" style="@style/channel_editor_label" />
+            <EditText android:id="@id/name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/title" android:maxLines="1" android:ems="10" android:maxLength="8" android:layout_weight="1.0" android:inputType="text" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <com.dw.android.widget.ListItemView android:id="@id/rx_freq" android:layout_width="fill_parent" android:layout_height="wrap_content" app:accessory="DisclosureIndicator" app:title="@string/rx_freq" />
+        <com.dw.android.widget.ListItemView android:id="@id/tx_freq" android:layout_width="fill_parent" android:layout_height="wrap_content" app:accessory="DisclosureIndicator" app:title="@string/tx_freq" />
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:id="@id/rx_sub_audio_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/rxCTCSS" style="@style/channel_editor_label" />
+            <com.dw.android.widget.Spinner android:id="@id/rx_sub_audio" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:layout_weight="1.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:id="@id/tx_sub_audio_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/txCTCSS" style="@style/channel_editor_label" />
+            <com.dw.android.widget.Spinner android:id="@id/tx_sub_audio" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:layout_weight="1.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:id="@id/rx_color_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/dmr_rx_color" style="@style/channel_editor_label" />
+            <com.dw.android.widget.Spinner android:id="@id/rx_color" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:layout_weight="1.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:id="@id/tx_color_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/dmr_tx_color" style="@style/channel_editor_label" />
+            <com.dw.android.widget.Spinner android:id="@id/tx_color" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:layout_weight="1.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:id="@id/slot_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/dmr_slot" style="@style/channel_editor_label" />
+            <com.dw.android.widget.Spinner android:id="@id/slot" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:layout_weight="1.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:id="@id/tx_power_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/txPower" style="@style/channel_editor_label" />
+            <com.dw.android.widget.Spinner android:entries="@array/txPowerArray" android:id="@id/tx_power" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:layout_weight="1.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:orientation="horizontal" android:id="@id/bandwidth_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/bandwidth" style="@style/channel_editor_label" />
+            <com.dw.android.widget.Spinner android:entries="@array/bandwidthArray" android:id="@id/bandwidth" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="40.0dip" android:layout_weight="1.0" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/tx_disable" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/disableTx" />
+        <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/mute" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/mute" />
+        <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/offline" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/offline" />
+        <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/scan" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/allowScan" />
+        <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/pre_de_emph" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/pre_de_emph" />
+        <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/sign" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/signaling" />
+        <com.dw.android.widget.TintTextView android:gravity="center_vertical" android:id="@id/more" android:background="?selectableItemBackground" android:padding="6.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/min_touch_area_size" android:text="@string/more" app:drawableRight="@drawable/ic_expand_more_24dp" app:tint="?colorPrimary" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

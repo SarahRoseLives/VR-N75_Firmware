@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="?android:textColorPrimary" android:gravity="center" android:id="@id/number" android:layout_width="0.0dip" android:layout_height="wrap_content" android:fontFamily="monospace" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:gravity="center" android:id="@id/message" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/number" />
+    <info.hoang8f.android.segmented.SegmentedGroup android:orientation="horizontal" android:id="@id/modulation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_weight="1.0" android:layout_marginStart="11.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/message" app:sc_border_width="1.0dip" app:sc_tint_color="?colorPrimary">
+        <RadioButton android:id="@id/fm" android:text="FM" style="@style/Widget.RadioButton" />
+        <RadioButton android:id="@id/am" android:text="AM" style="@style/Widget.RadioButton" />
+        <RadioButton android:id="@id/dmr" android:text="DMR" style="@style/Widget.RadioButton" />
+    </info.hoang8f.android.segmented.SegmentedGroup>
+    <androidx.gridlayout.widget.GridLayout android:id="@id/keyboard" android:layout_width="fill_parent" android:layout_height="@dimen/number_keyboard_h" android:layout_marginTop="3.0dip" android:layout_marginBottom="8.0dip" android:maxHeight="220.0dip" android:minHeight="180.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:columnCount="3" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/modulation">
+        <Button android:text="1" style="@style/number_button" />
+        <Button android:text="2" style="@style/number_button" />
+        <Button android:text="3" style="@style/number_button" />
+        <Button android:text="4" style="@style/number_button" />
+        <Button android:text="5" style="@style/number_button" />
+        <Button android:text="6" style="@style/number_button" />
+        <Button android:text="7" style="@style/number_button" />
+        <Button android:text="8" style="@style/number_button" />
+        <Button android:text="9" style="@style/number_button" />
+        <com.dw.widget.ActionButton android:id="@id/backspace" android:scaleType="center" android:contentDescription="@string/backspace" app:srcCompat="@drawable/ic_backspace_24dp" app:tint="?android:textColorPrimary" style="@style/number_button" />
+        <Button android:text="0" style="@style/number_button" />
+        <Button android:textSize="16.0sp" android:id="@id/ok" android:text="@android:string/ok" style="@style/number_button" />
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.FrameLayout android:id="@id/connect" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.dw.android.widget.TintTextView android:textAppearance="?textAppearanceListItem" android:layout_gravity="center" android:id="@id/connect_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/connectToControlTheDevice" android:drawablePadding="6.0dip" app:drawableTop="@drawable/ic_connect_24dp" app:tint="?list_button_tint" />
+        <com.dw.android.widget.TintTextView android:layout_gravity="bottom" android:id="@id/need_paired" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/needPairedTip" android:drawablePadding="6.0dip" app:drawableLeft="@drawable/ic_lightbulb_outline_24dp" app:drawableStart="@drawable/ic_lightbulb_outline_24dp" app:tint="?list_button_tint" />
+    </androidx.appcompat.widget.FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/control_panel" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="380.0dip">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/screen" android:background="#ffd0e607" android:layout_width="fill_parent" android:layout_height="64.0dip">
+            <com.dw.android.widget.TintTextView android:textAppearance="?textAppearanceListItem" android:textSize="16.0sp" android:textColor="#ff597811" android:gravity="center_vertical" android:id="@id/rx_freq_a" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:tint="#ff597811" />
+            <com.dw.android.widget.TintTextView android:textAppearance="?textAppearanceListItem" android:textSize="16.0sp" android:textColor="#ff597811" android:gravity="center_vertical" android:id="@id/rx_freq_b" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" app:tint="#ff597811" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_ch_button_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/iv_battery" android:layout_width="24.0dip" android:layout_height="@dimen/recommended_touch_area_size" android:layout_marginLeft="0.0dip" android:layout_marginTop="0.0dip" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_battery_unknown" app:tint="?list_button_tint" />
+            <Space android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <com.dw.widget.ActionButton android:id="@id/region" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size" android:contentDescription="@string/changeRegion" app:layout_constraintRight_toLeftOf="@id/settings" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_region_black_24dp" app:tint="?list_button_tint" />
+            <com.dw.widget.ActionButton android:id="@id/radio" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size" android:contentDescription="@string/radio" app:layout_constraintRight_toLeftOf="@id/settings" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_radio_24dp" app:tint="?list_button_tint" />
+            <com.dw.widget.ActionButton android:id="@id/settings" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size" android:contentDescription="@string/settings" app:layout_constraintRight_toLeftOf="@id/disconnect" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_settings_applications_black_24dp" app:tint="?list_button_tint" />
+            <com.dw.widget.ActionButton android:id="@id/disconnect" android:layout_width="@dimen/recommended_touch_area_size" android:layout_height="@dimen/recommended_touch_area_size" android:contentDescription="@string/disconnect" app:layout_constraintRight_toRightOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/ic_disconnect_24dp" app:tint="?list_button_tint" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:background="@drawable/bg_ch_button_normal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.dw.widget.ActionButton android:layout_width="@dimen/min_touch_area_size" android:layout_height="@dimen/min_touch_area_size" android:contentDescription="@null" app:srcCompat="@drawable/ic_volume_up_24dp" app:tint="?list_button_tint" />
+            <SeekBar android:id="@id/vol" android:layout_width="0.0dip" android:layout_height="wrap_content" android:max="100" android:progress="0" android:layout_weight="1.0" android:contentDescription="@string/volume" />
+        </LinearLayout>
+        <androidx.gridlayout.widget.GridLayout android:id="@id/chs" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="4.0" app:columnCount="4">
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+            <include layout="@layout/button_ch" style="@style/ch_button" />
+        </androidx.gridlayout.widget.GridLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/op" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.5">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <androidx.appcompat.widget.SwitchCompat android:id="@id/tx_power" android:text="@string/high_power" style="@style/control_switch" />
+                <androidx.appcompat.widget.SwitchCompat android:id="@id/offline" android:text="@string/offline" style="@style/control_switch" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <androidx.appcompat.widget.SwitchCompat android:id="@id/scan" android:text="@string/scan" style="@style/control_switch" />
+                <androidx.appcompat.widget.SwitchCompat android:id="@id/double_ch" android:text="@string/dual_waiting" style="@style/control_switch" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <androidx.appcompat.widget.SwitchCompat android:id="@id/radio_switch" android:text="@string/radio" style="@style/control_switch" />
+                <androidx.appcompat.widget.SwitchCompat android:id="@id/on_off" android:text="@string/power" style="@style/control_switch" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <GridLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="5">
+            <TextView android:text="无线电" android:layout_columnSpan="5" app:layout_columnSpan="5" style="?android:listSeparatorTextViewStyle" />
+            <TextView android:text="RSSI:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/rssi" android:layout_width="40.0dip" style="@style/dev_adv_settings_label.left" />
+            <TextView android:id="@id/rssi2" android:layout_width="40.0dip" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/rssi_rr" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/rssi_r" android:layout_width="fill_parent" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="NOISE:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/noise" style="@style/dev_adv_settings_label.left" />
+            <TextView android:id="@id/noise2" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/noise_rr" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/noise_r" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="SQ:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/sq" android:layout_columnSpan="2" app:layout_columnSpan="2" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="亚音:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/sa" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="AGC:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/agc" android:layout_columnSpan="2" app:layout_columnSpan="2" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="寄存器[1C]:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/r1" style="@style/dev_adv_settings_label.left" />
+        </GridLayout>
+        <GridLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:columnCount="4">
+            <TextView android:text="GPS" android:layout_columnSpan="4" app:layout_columnSpan="4" style="?android:listSeparatorTextViewStyle" />
+            <TextView android:text="电源:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/gps_module_power" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="定位间隔:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/gps_updates_min_time" android:layout_width="fill_parent" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="定位时间:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/gps_lock_time" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="最后锁定时长:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/gps_last_lock_time" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="外设" android:layout_columnSpan="4" app:layout_columnSpan="4" style="?android:listSeparatorTextViewStyle" />
+            <TextView android:text="显示驱动电源:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/dis_module_power" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="姿态传感器电源:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/ori_module_power" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="SPI Flash:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/spi_flash" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="写EEPROM:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/eeprom_write_times" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="加载信道数据:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/load_ch_times" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="通讯" android:layout_columnSpan="4" app:layout_columnSpan="4" style="?android:listSeparatorTextViewStyle" />
+            <TextView android:text="I2C通信错误:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/i2c_err_times" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="显示命令丢失:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/gdi_com_lost" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="MCU->BT 校验错误:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/rpc_rx_err_times" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="BT -> MCU 校验错误:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/rpc_tx_err_times" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="DSP状态" android:layout_columnSpan="4" app:layout_columnSpan="4" style="?android:listSeparatorTextViewStyle" />
+            <TextView android:text="AOU:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/aou_is_active" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="DSP:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/dsp_is_connected" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="内存状态" android:layout_columnSpan="4" app:layout_columnSpan="4" style="?android:listSeparatorTextViewStyle" />
+            <TextView android:text="malloc slots:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/malloc_slots" style="@style/dev_adv_settings_label.left" />
+            <TextView android:text="ps space:" style="@style/dev_adv_settings_label.right" />
+            <TextView android:id="@id/ps_space" style="@style/dev_adv_settings_label.left" />
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

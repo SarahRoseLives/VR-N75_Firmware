@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.FrameLayout android:id="@id/_map" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout android:layout_gravity="end" android:orientation="vertical" android:id="@id/map_tools" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="3.0dip" android:layout_marginEnd="3.0dip">
+        <com.dw.widget.ActionButton android:id="@id/map_layer" android:contentDescription="@string/map_type" app:srcCompat="@drawable/ic_mp_maplayer" style="@style/map.button" />
+    </LinearLayout>
+</FrameLayout>

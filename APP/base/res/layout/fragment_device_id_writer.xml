@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/bg_ch_button_normal" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.gridlayout.widget.GridLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:columnCount="5" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UID：" app:layout_column="0" app:layout_row="0" />
+        <TextView android:id="@id/uid_name" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_column="1" app:layout_columnWeight="1.0" app:layout_row="0" />
+        <TextView android:id="@id/uid_count" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_column="2" app:layout_row="0" />
+        <Button android:id="@id/uid_load" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="载入" app:layout_column="3" app:layout_row="0" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="索引：" app:layout_column="0" app:layout_row="1" />
+        <EditText android:id="@id/uid_index" android:layout_width="0.0dip" android:layout_height="wrap_content" android:ems="8" android:inputType="number" app:layout_column="1" app:layout_columnWeight="1.0" app:layout_row="1" />
+        <Button android:id="@id/uid_index_dec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" app:layout_column="3" app:layout_row="1" />
+        <Button android:id="@id/uid_index_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" app:layout_column="4" app:layout_row="1" />
+        <Button android:id="@id/uid_write" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="写入UID" app:layout_column="4" app:layout_row="0" style="@style/Widget.AppCompat.Button.Colored" />
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

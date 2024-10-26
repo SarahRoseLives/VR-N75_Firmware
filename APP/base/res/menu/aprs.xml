@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/aprs_switch" app:actionLayout="@layout/switch_item" app:showAsAction="always" />
+    <item android:icon="@drawable/ic_search_24dp" android:id="@id/search" android:menuCategory="secondary" android:title="@string/search" app:showAsAction="always" />
+    <item android:id="@id/aprs_settings" android:menuCategory="secondary" android:title="@string/settings" />
+</menu>

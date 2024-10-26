@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="RSSI 级别[0,63]" style="?android:listSeparatorTextViewStyle" />
+        <androidx.gridlayout.widget.GridLayout android:id="@id/squelch_level" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="10">
+            <TextView android:text="0" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="1" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="2" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="3" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="4" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="5" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="6" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="7" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="8" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="9" style="@style/dev_adv_settings_label" />
+            <EditText style="@style/dev_adv_settings_number.l2" />
+        </androidx.gridlayout.widget.GridLayout>
+        <androidx.gridlayout.widget.GridLayout android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+            <TextView android:layout_height="wrap_content" android:text="宽带 NOISE[0,99]" app:layout_gravity="right|center" />
+            <EditText android:id="@id/wideNoiseThreshold" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:layout_height="wrap_content" android:text="窄带 NOISE[0,99]" app:layout_gravity="right|center" />
+            <EditText android:id="@id/narrowNoiseThreshold" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:layout_height="wrap_content" android:text="RSSI 关闭偏移[0,15]" app:layout_gravity="right|center" />
+            <EditText android:id="@id/rssiDifference" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:layout_height="wrap_content" android:text="NOISE 关闭偏移[0,15]" app:layout_gravity="right|center" />
+            <EditText android:id="@id/noiseDifference" style="@style/dev_adv_settings_number.l2" />
+        </androidx.gridlayout.widget.GridLayout>
+        <include android:id="@id/offset" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/dev_tx_power" />
+    </LinearLayout>
+</ScrollView>

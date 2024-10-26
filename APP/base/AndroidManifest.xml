@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" android:requiredSplitTypes="base__abi,base__density" android:splitTypes="" package="com.benshikj.ht" platformBuildVersionCode="35" platformBuildVersionName="15">
+    <permission android:label="@string/app_name" android:name="com.benshikj.ht.permission.CONTROL_HT" android:protectionLevel="dangerous"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.usb.host" android:required="false"/>
+    <queries>
+        <package android:name="com.tencent.mm"/>
+        <package android:name="com.tencent.mobileqq"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <package android:name="com.google.android.apps.maps"/>
+    </queries>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
+    </queries>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <permission android:name="com.benshikj.ht.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.benshikj.ht.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.dw.ht.Main" android:networkSecurityConfig="@xml/network_security_config" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:configChanges="layoutDirection|locale" android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.dw.ht.BTActivity" android:theme="@style/AppTheme.Main" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/vnd.google-earth.kml+xml"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="ht" android:pathPrefix="/iich" android:scheme="benshikjcom"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:host="@string/ii_ch_share_host"/>
+                <data android:pathPrefix="@string/ii_ch_share_path_prefix"/>
+                <data android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.dw.ht.activitys.SplashActivity" android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="com.dw.ht.UsbStatusReceiver">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"/>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_DETACHED"/>
+            </intent-filter>
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/usb_device_filter"/>
+            <meta-data android:name="android.hardware.usb.action.USB_DEVICE_DETACHED" android:resource="@xml/usb_device_filter"/>
+        </receiver>
+        <activity android:exported="true" android:icon="@drawable/ic_update_small" android:label="@string/firmware_update" android:name="com.dw.ht.activitys.UpdateActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true" android:name="com.dw.android.app.FragmentShowActivity" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/sendPicture" android:launchMode="singleTask" android:name="com.dw.ht.activitys.PictureSendActivity" android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.dw.ht.activitys.AuthCompleteActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:label="@string/offline_maps" android:name="com.dw.ht.offlinemap.OfflineMapActivity"/>
+        <activity android:exported="false" android:label="@string/send_message" android:name="com.dw.ht.activitys.MessageComposeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="aprs"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/login" android:name="com.dw.ht.user.LoginActivity"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent101439258"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="behind" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:name="com.dw.ht.satellite.SatelliteActivity" android:theme="@style/AppTheme.Main"/>
+        <activity android:launchMode="singleInstance" android:name="com.dw.ht.activitys.NewDeviceActivity" android:theme="@style/AppTheme.NewDevice"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/google_maps_key"/>
+        <receiver android:exported="true" android:name="com.dw.ht.receiver.BTStateMonitor">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.benshikj.ht.provider.Data" android:enabled="true" android:exported="false" android:name="com.dw.ht.provider.DataProvider"/>
+        <provider android:authorities="com.benshikj.ht.files" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <service android:exported="false" android:foregroundServiceType="shortService" android:name="com.dw.ht.alarms.AlarmService"/>
+        <receiver android:exported="false" android:name="com.dw.ht.utils.NotificationManager$Receiver"/>
+        <activity android:label="@string/title_activity_incoming" android:launchMode="singleInstance" android:name="com.dw.ht.activitys.IncomingActivity" android:theme="@style/AppTheme.Incoming"/>
+        <receiver android:enabled="true" android:exported="true" android:name="com.dw.ht.utils.CallbackReceiver"/>
+        <activity android:name="com.dw.ht.activitys.ContactDetailsActivity"/>
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.benshikj.ht.wxapi.WXEntryActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:exported="false" android:label="@string/message" android:launchMode="singleTask" android:name="com.dw.ht.activitys.MessageListActivity"/>
+        <service android:enabled="true" android:exported="false" android:name="com.dw.ht.ii.IIService"/>
+        <service android:exported="false" android:name="com.dw.ht.map.OfflineMapDownloadService"/>
+        <service android:exported="false" android:foregroundServiceType="location" android:name="com.dw.ht.IGateService"/>
+        <service android:exported="false" android:foregroundServiceType="location" android:name="com.dw.ht.LocationShareService"/>
+        <receiver android:exported="false" android:name="com.dw.ht.LocationShareService$Receiver"/>
+        <receiver android:exported="true" android:name="com.dw.ht.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:foregroundServiceType="location" android:name="com.dw.ht.TrackRecordingService"/>
+        <service android:enabled="true" android:exported="true" android:name="com.dw.ht.HTService" android:permission="com.benshikj.ht.permission.CONTROL_HT">
+            <intent-filter>
+                <action android:name="com.benshikj.ht.HT_SERVICE"/>
+            </intent-filter>
+        </service>
+        <activity android:name="ru.bartwell.exfilepicker.ui.activity.ExFilePickerActivity" android:theme="@style/ExFilePickerThemeLight"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="om.sstvencoder.MainActivity"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="om.sstvencoder.EditTextActivity" android:windowSoftInputMode="adjustPan|stateVisible"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+        <activity android:exported="false" android:launchMode="singleTask" android:name="net.openid.appauth.AuthorizationManagementActivity" android:theme="@style/Theme.AppCompat.Translucent.NoTitleBar"/>
+        <activity android:exported="true" android:name="net.openid.appauth.RedirectUriReceiverActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="com.benshikj.ht"/>
+            </intent-filter>
+        </activity>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.benshikj.ht.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>

@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="aghfp_modes">
+        <item>@string/voiceMode</item>
+        <item>@string/callMode</item>
+    </string-array>
+    <string-array name="aprs_servers">
+        <item>noam.aprs2.net</item>
+        <item>soam.aprs2.net</item>
+        <item>euro.aprs2.net</item>
+        <item>asia.aprs2.net</item>
+        <item>aunz.aprs2.net</item>
+    </string-array>
+    <string-array name="aprs_servers_name">
+        <item>North America</item>
+        <item>South America</item>
+        <item>Europe and Africa</item>
+        <item>Asia</item>
+        <item>Oceania</item>
+    </string-array>
+    <string-array name="bandwidthArray">
+        <item>25KHz</item>
+        <item>12.5KHz</item>
+    </string-array>
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>1</item>
+        <item>20</item>
+        <item>21</item>
+    </integer-array>
+    <string-array name="data_formats">
+        <item>BSS</item>
+        <item>APRS</item>
+    </string-array>
+    <string-array name="efp__size_units">
+        <item>B</item>
+        <item>kB</item>
+        <item>mB</item>
+        <item>gB</item>
+        <item>tB</item>
+        <item>pB</item>
+    </string-array>
+    <string-array name="efp__sorting_types">
+        <item>By name, ascending</item>
+        <item>By name, descending</item>
+        <item>By size, ascending</item>
+        <item>By size, descending</item>
+        <item>By date, ascending</item>
+        <item>By date, descending</item>
+    </string-array>
+    <string-array name="freq_scan_fine_tuning_steps">
+        <item>0.5KHz</item>
+        <item>5KHz</item>
+        <item>6.25KHz</item>
+        <item>10KHz</item>
+        <item>12.5KHz</item>
+        <item>15KHz</item>
+        <item>25KHz</item>
+    </string-array>
+    <string-array name="freq_scan_steps">
+        <item>5KHz</item>
+        <item>6.25KHz</item>
+        <item>10KHz</item>
+        <item>12.5KHz</item>
+        <item>15KHz</item>
+        <item>25KHz</item>
+    </string-array>
+    <string-array name="hm_speaker_modes">
+        <item>@string/auto</item>
+        <item>@string/on</item>
+        <item>@string/off</item>
+        <item>SQ</item>
+    </string-array>
+    <string-array name="iiBitRates">
+        <item>32kb/s</item>
+        <item>24kb/s</item>
+        <item>16kb/s</item>
+        <item>12kb/s</item>
+        <item>8kb/s</item>
+    </string-array>
+    <integer-array name="iiBitRatesValue">
+        <item>32000</item>
+        <item>24000</item>
+        <item>16000</item>
+        <item>12000</item>
+        <item>8000</item>
+    </integer-array>
+    <string-array name="locationSource">
+        <item>@string/system</item>
+        <item>@string/selectCoordinates</item>
+    </string-array>
+    <string-array name="micGainArray">
+        <item>@string/low</item>
+        <item>@string/medium</item>
+        <item>@string/high</item>
+    </string-array>
+    <string-array name="pf_actions">
+        <item>@string/disable</item>
+        <item>@string/alarm</item>
+        <item>@string/alarm_and_mute</item>
+        <item>@string/toggle_offline</item>
+        <item>@string/toggle_radio_tx</item>
+        <item>@string/toggle_tx_power</item>
+        <item>@string/toggle_fm</item>
+        <item>@string/prev_channel</item>
+        <item>@string/next_channel</item>
+    </string-array>
+    <string-array name="pf_actions_103">
+        <item>@string/disable</item>
+        <item>@string/alarm</item>
+        <item>@string/alarm_and_mute</item>
+        <item>@string/toggle_ch_scan</item>
+        <item>@string/toggle_offline</item>
+        <item>@string/toggle_radio_tx</item>
+        <item>@string/toggle_tx_power</item>
+        <item>@string/toggle_fm</item>
+        <item>@string/toggle_monitor</item>
+        <item>@string/prev_channel</item>
+        <item>@string/next_channel</item>
+        <item>@string/prev_region</item>
+        <item>@string/next_region</item>
+        <item>@string/t_call</item>
+        <item>@string/main_ptt</item>
+        <item>@string/sub_ptt</item>
+        <item>@string/bt_pairing</item>
+    </string-array>
+    <string-array name="pf_actions_106">
+        <item>@string/disable</item>
+        <item>@string/alarm</item>
+        <item>@string/alarm_and_mute</item>
+        <item>@string/toggle_ch_scan</item>
+        <item>@string/toggle_double_ch</item>
+        <item>@string/toggle_ab_ch</item>
+        <item>@string/toggle_offline</item>
+        <item>@string/toggle_radio_tx</item>
+        <item>@string/toggle_tx_power</item>
+        <item>@string/toggle_fm</item>
+        <item>@string/toggle_monitor</item>
+        <item>@string/prev_channel</item>
+        <item>@string/next_channel</item>
+        <item>@string/prev_region</item>
+        <item>@string/next_region</item>
+        <item>@string/t_call</item>
+        <item>@string/main_ptt</item>
+        <item>@string/sub_ptt</item>
+        <item>@string/bt_pairing</item>
+    </string-array>
+    <string-array name="pf_actions_113">
+        <item>@string/disable</item>
+        <item>@string/alarm</item>
+        <item>@string/alarm_and_mute</item>
+        <item>@string/sendLocation</item>
+        <item>@string/toggle_ch_scan</item>
+        <item>@string/toggle_double_ch</item>
+        <item>@string/toggle_ab_ch</item>
+        <item>@string/toggle_offline</item>
+        <item>@string/toggle_radio_tx</item>
+        <item>@string/toggle_tx_power</item>
+        <item>@string/toggle_fm</item>
+        <item>@string/toggle_monitor</item>
+        <item>@string/prev_channel</item>
+        <item>@string/next_channel</item>
+        <item>@string/prev_region</item>
+        <item>@string/next_region</item>
+        <item>@string/t_call</item>
+        <item>@string/main_ptt</item>
+        <item>@string/sub_ptt</item>
+        <item>@string/bt_pairing</item>
+    </string-array>
+    <string-array name="pf_actions_52">
+        <item>@string/disable</item>
+        <item>@string/alarm</item>
+        <item>@string/alarm_and_mute</item>
+        <item>@string/toggle_offline</item>
+        <item>@string/toggle_radio_tx</item>
+        <item>@string/toggle_tx_power</item>
+        <item>@string/toggle_fm</item>
+    </string-array>
+    <string-array name="pf_actions_69">
+        <item>@string/disable</item>
+        <item>@string/alarm</item>
+        <item>@string/alarm_and_mute</item>
+        <item>@string/toggle_offline</item>
+        <item>@string/toggle_radio_tx</item>
+        <item>@string/toggle_tx_power</item>
+        <item>@string/toggle_fm</item>
+        <item>@string/prev_channel</item>
+        <item>@string/next_channel</item>
+        <item>@string/t_call</item>
+    </string-array>
+    <string-array name="pf_actions_77">
+        <item>@string/disable</item>
+        <item>@string/alarm</item>
+        <item>@string/alarm_and_mute</item>
+        <item>@string/toggle_offline</item>
+        <item>@string/toggle_radio_tx</item>
+        <item>@string/toggle_tx_power</item>
+        <item>@string/toggle_fm</item>
+        <item>@string/prev_channel</item>
+        <item>@string/next_channel</item>
+        <item>@string/prev_region</item>
+        <item>@string/next_region</item>
+        <item>@string/t_call</item>
+    </string-array>
+    <string-array name="pf_actions_80">
+        <item>@string/disable</item>
+        <item>@string/alarm</item>
+        <item>@string/alarm_and_mute</item>
+        <item>@string/toggle_ch_scan</item>
+        <item>@string/toggle_offline</item>
+        <item>@string/toggle_radio_tx</item>
+        <item>@string/toggle_tx_power</item>
+        <item>@string/toggle_fm</item>
+        <item>@string/prev_channel</item>
+        <item>@string/next_channel</item>
+        <item>@string/prev_region</item>
+        <item>@string/next_region</item>
+        <item>@string/t_call</item>
+        <item>@string/main_ptt</item>
+        <item>@string/sub_ptt</item>
+    </string-array>
+    <integer-array name="pf_actions_v">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </integer-array>
+    <integer-array name="pf_actions_v_103">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>12</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>15</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>9</item>
+        <item>13</item>
+        <item>14</item>
+        <item>16</item>
+    </integer-array>
+    <integer-array name="pf_actions_v_106">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>12</item>
+        <item>17</item>
+        <item>18</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>15</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>9</item>
+        <item>13</item>
+        <item>14</item>
+        <item>16</item>
+    </integer-array>
+    <integer-array name="pf_actions_v_113">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>19</item>
+        <item>12</item>
+        <item>17</item>
+        <item>18</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>15</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>9</item>
+        <item>13</item>
+        <item>14</item>
+        <item>16</item>
+    </integer-array>
+    <integer-array name="pf_actions_v_52">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </integer-array>
+    <integer-array name="pf_actions_v_69">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </integer-array>
+    <integer-array name="pf_actions_v_77">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>9</item>
+    </integer-array>
+    <integer-array name="pf_actions_v_80">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>12</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>10</item>
+        <item>11</item>
+        <item>9</item>
+        <item>13</item>
+        <item>14</item>
+    </integer-array>
+    <string-array name="show_icon_time_names">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+        <item>2 days</item>
+        <item>3 days</item>
+        <item>4 days</item>
+        <item>5 days</item>
+        <item>6 days</item>
+        <item>7 days</item>
+        <item>All</item>
+    </string-array>
+    <integer-array name="show_icon_times">
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>10800000</item>
+        <item>21600000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+        <item>172800000</item>
+        <item>259200000</item>
+        <item>345600000</item>
+        <item>432000000</item>
+        <item>518400000</item>
+        <item>604800000</item>
+        <item>0</item>
+    </integer-array>
+    <string-array name="show_track_time_names">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+        <item>2 days</item>
+        <item>3 days</item>
+        <item>4 days</item>
+        <item>5 days</item>
+        <item>6 days</item>
+        <item>7 days</item>
+        <item>All</item>
+    </string-array>
+    <integer-array name="show_track_times">
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+        <item>10800000</item>
+        <item>21600000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+        <item>172800000</item>
+        <item>259200000</item>
+        <item>345600000</item>
+        <item>432000000</item>
+        <item>518400000</item>
+        <item>604800000</item>
+        <item>0</item>
+    </integer-array>
+    <string-array name="speaker_modes">
+        <item>@string/auto</item>
+        <item>@string/on</item>
+        <item>@string/off</item>
+    </string-array>
+    <string-array name="txPowerArray">
+        <item>@string/low</item>
+        <item>@string/medium</item>
+        <item>@string/high</item>
+    </string-array>
+    <string-array name="txPowerLH">
+        <item>@string/low</item>
+        <item>@string/high</item>
+    </string-array>
+    <string-array name="vendors">
+        <item>本视科技</item>
+        <item>威诺电子</item>
+        <item>九方</item>
+        <item>RETEVIS</item>
+        <item>即时通科技</item>
+        <item>鸿凯德科技</item>
+        <item>BTECH</item>
+        <item>未指定</item>
+    </string-array>
+    <string-array name="wx_ch_7">
+        <item>WX1–162.550MHz</item>
+        <item>WX2–162.400MHz</item>
+        <item>WX3–162.475MHz</item>
+        <item>WX4–162.425MHz</item>
+        <item>WX5–162.450MHz</item>
+        <item>WX6–162.500MHz</item>
+        <item>WX7–162.525MHz</item>
+    </string-array>
+    <string-array name="wx_modes">
+        <item>@string/off</item>
+        <item>@string/monitor</item>
+        <item>@string/alert</item>
+    </string-array>
+</resources>

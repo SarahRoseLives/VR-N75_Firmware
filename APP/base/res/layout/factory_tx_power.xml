@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发射功率[0,63]：" />
+            <EditText android:id="@id/power_base" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="number" />
+            <TextView android:id="@id/power_pa_d" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PA[0,15]：" />
+            <EditText android:id="@id/power_pa" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="number" />
+        </LinearLayout>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="VHF 校准[0,15]" style="?android:listSeparatorTextViewStyle" />
+        <androidx.gridlayout.widget.GridLayout android:id="@id/r0" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" app:columnCount="8">
+            <TextView android:text="130" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="140" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="150" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="160" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="170" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="180" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="190" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="200" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="210" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="220" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="230" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="240" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="250" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="260" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="270" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="280" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+        </androidx.gridlayout.widget.GridLayout>
+        <LinearLayout android:id="@id/power_pa_vhf_c" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PA[0,15]：" />
+            <EditText android:id="@id/power_pa_vhf" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="number" />
+        </LinearLayout>
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="UHF 校准[0,15]" style="?android:listSeparatorTextViewStyle" />
+        <androidx.gridlayout.widget.GridLayout android:id="@id/r1" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="8">
+            <TextView android:text="350" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="360" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="370" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="380" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="390" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="400" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="410" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="420" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="430" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="440" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="450" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="460" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="470" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="480" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="490" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="500" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="510" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="520" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="530" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+            <TextView android:text="540" style="@style/dev_adv_settings_label" />
+            <EditText android:text="0" style="@style/dev_adv_settings_number.l2" />
+        </androidx.gridlayout.widget.GridLayout>
+        <LinearLayout android:id="@id/power_pa_uhf_c" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PA[0,15]：" />
+            <EditText android:id="@id/power_pa_uhf" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:inputType="number" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

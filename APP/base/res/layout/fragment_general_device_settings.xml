@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.gridlayout.widget.GridLayout android:paddingTop="@dimen/activity_vertical_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/activity_horizontal_margin" android:paddingEnd="@dimen/activity_horizontal_margin" app:columnCount="2">
+        <androidx.cardview.widget.CardView android:id="@id/noaa_group" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin" app:layout_columnSpan="2" app:layout_columnWeight="1.0">
+            <androidx.gridlayout.widget.GridLayout android:background="?cardBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/wx_mode" app:entries="@array/wx_modes" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:maxValue="2" app:title="@string/wx_mode" />
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/wx_ch" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:title="@string/wxChannel" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin" app:layout_columnSpan="2" app:layout_columnWeight="1.0">
+            <androidx.gridlayout.widget.GridLayout android:background="?cardBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/tx_time_limit" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:title="@string/tx_time_limit" />
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/tx_hold_time" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:title="@string/tx_hold_time" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:gravity="center_vertical" android:id="@id/adaptive_response" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" android:text="@string/scanningAnswerMode" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/tail_elimination" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" android:text="@string/tail_elimination" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/digital_mute" android:padding="8.0dip" android:visibility="gone" android:minHeight="@dimen/min_touch_area_size" android:text="@string/digitalMute" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/leading_sync_bit_en" android:padding="8.0dip" android:visibility="gone" android:minHeight="@dimen/min_touch_area_size" android:text="@string/signalingPreamble" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <com.dw.android.widget.DWSwitch android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/audio_relay_en" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" android:text="@string/audio_relay" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:id="@id/audio_in_group" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin" app:layout_columnSpan="2" app:layout_columnWeight="1.0">
+            <androidx.gridlayout.widget.GridLayout android:background="?cardBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/mic_gain" android:layout_width="fill_parent" android:layout_height="wrap_content" app:entries="@array/micGainArray" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:maxValue="2" app:title="@string/microphoneGain" />
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/bt_mic_gain" android:layout_width="fill_parent" android:layout_height="wrap_content" app:entries="@array/micGainArray" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:maxValue="2" app:title="@string/wirelessMicGain" />
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/aghfp_mode" app:entries="@array/aghfp_modes" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:maxValue="1" app:message="@string/headphoneModeDescription" app:title="@string/headphoneMode" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/keep_aghfp_link" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" android:text="@string/keepAgAudioLink" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:id="@id/power_group" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin" app:layout_columnSpan="2" app:layout_columnWeight="1.0">
+            <androidx.gridlayout.widget.GridLayout android:background="?cardBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/ch_data_lock" android:padding="8.0dip" android:visibility="gone" android:minHeight="@dimen/min_touch_area_size" android:text="@string/lock_channel_data" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/tone" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" android:text="@string/tone" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/power_saving_mode" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" android:text="@string/power_saving_mode" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/auto_power_on" android:padding="8.0dip" android:minHeight="@dimen/min_touch_area_size" android:text="@string/autoPowerOn" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/auto_power_off" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:maxValue="7" app:title="@string/automaticShutDown" />
+                <androidx.appcompat.widget.SwitchCompat android:textAppearance="@style/TextAppearance.ListItem.Title" android:id="@id/pairing_at_power_on" android:padding="8.0dip" android:visibility="gone" android:minHeight="@dimen/min_touch_area_size" android:text="@string/pairing_at_power_on" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin" app:layout_columnSpan="2" app:layout_columnWeight="1.0">
+            <androidx.gridlayout.widget.GridLayout android:background="?cardBackground" android:layout_width="fill_parent" android:layout_height="wrap_content" app:columnCount="2">
+                <com.dw.android.widget.NumberPreferenceView android:gravity="center_vertical" android:id="@id/pp_id" android:visibility="gone" app:layout_columnSpan="2" app:layout_gravity="fill_horizontal" app:maxValue="65535" app:minValue="0" app:title="@string/patrolSystemID" />
+            </androidx.gridlayout.widget.GridLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="@dimen/card_margin" app:layout_columnSpan="2" app:layout_columnWeight="1.0">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:background="?cardBackground" android:layout_width="fill_parent" android:layout_height="fill_parent" app:divider="?android:listDivider" app:showDividers="middle">
+                <com.dw.android.widget.CardHeaderView android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="@string/reset" />
+                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:divider="?android:listDivider" app:dividerPadding="3.0dip" app:showDividers="middle">
+                    <com.dw.android.widget.TintTextView android:id="@id/reset_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/reset_settings" style="@style/Widget.Settings.More" />
+                    <com.dw.android.widget.TintTextView android:id="@id/factory_data_reset" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/factory_data_reset" style="@style/Widget.Settings.More" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+    </androidx.gridlayout.widget.GridLayout>
+</ScrollView>
